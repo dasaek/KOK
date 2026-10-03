@@ -1,0 +1,2390 @@
+@charset "utf-8";
+
+/* webfont 페이퍼로지 */
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* ========== 기본 세팅 ========== */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #222;
+    background-color: #fffae6;
+}
+
+#wrap {
+    min-width: 1360px;
+}
+
+/* =============== sidde_bar 사이드 바 =============== */
+.side_bar {
+    position: fixed;
+    right: 30px;
+    top: 780px;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 99;
+}
+
+.side_bar img {
+    display: block;
+    width: 50px;
+
+    cursor: pointer;
+}
+
+/* =============== header 헤더 =============== */
+header {
+    width: 100%;
+    height: 100px;
+
+    padding: 40px 90px 25px;
+    box-sizing: border-box;
+
+    font-family: 'Paperlogy';
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        color 0.35s ease;
+}
+
+/* 스크롤 후 위로 올릴 때 보이는 헤더 */
+header.header_show {
+    background-color: #fffae6;
+    color: #222;
+    border-bottom: 4px solid #ff5b38;
+
+    transform: translateY(0);
+}
+
+header.header_show .search img {
+    content: url("../images/header/search.svg");
+}
+
+header.header_show .bag img {
+    content: url("../images/header/bag.svg");
+}
+
+header.header_show .heart img {
+    content: url("../images/header/heart.svg");
+}
+
+header.header_show .mypage img {
+    content: url("../images/header/mypage.svg");
+}
+
+/* 아래로 스크롤할 때 숨김 */
+header.header_hide {
+    transform: translateY(-100%);
+}
+
+
+/* 최상단에서는 원래 투명 상태 */
+header.header_top {
+    background-color: transparent;
+    color: white;
+    border-bottom: none;
+
+    transform: translateY(0);
+}
+
+.logo {
+    display: block;
+}
+
+
+/* =============== gnb 메뉴 =============== */
+.gnb {
+    display: flex;
+}
+
+.gnb li {
+    margin-left: 167px;
+
+    position: relative;
+}
+
+.gnb li a {
+    display: inline-block;
+
+    /* 꽃을 텍스트 "뒤로" 위치하기 위한 position */
+    position: relative;
+    z-index: 1;
+}
+
+.gnb li::before {
+    /* gnb 호버 공통 꾸미기 */
+    content: "";
+
+    /* 꽃의 이미지 크기 */
+    width: 19px;
+    height: 18px;
+
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    z-index: 0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.gnb li:first-child::before {
+    background-image: url(../images/header/orange_hover.svg);
+}
+
+.gnb li:nth-child(2)::before {
+    background-image: url(../images/header/blue_hover.svg);
+}
+
+.gnb li:nth-child(3)::before {
+    background-image: url(../images/header/yellow_hover.svg);
+}
+
+.gnb li:nth-child(4)::before {
+    background-image: url(../images/header/green_hover.svg);
+}
+
+.gnb li:nth-child(5)::before {
+    background-image: url(../images/header/brown_hover.svg);
+}
+
+.gnb li:hover::before {
+    transform: scale(2.8);
+    transform-origin: right top;
+}
+
+.util {
+    display: flex;
+}
+
+.util li {
+    margin-left: 30px;
+}
+
+/* =============== banner =============== */
+#banner .swiper {
+    height: 912px;
+    --swiper-scrollbar-bottom: 10px;
+
+    position: relative;
+}
+
+#banner .swiper-slide {
+    text-align: center;
+    background: #444;
+
+    display: flex;
+    /* 가운데 정렬용 */
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* 이미지 비율 유지 + 부모박스안에 빈틈없이 채우기 */
+    object-fit: cover;
+}
+
+#banner .swiper-scrollbar {
+    width: calc(1850px);
+    height: 8px;
+
+    /* 스크롤바 중앙 정렬 */
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #cdcdcd;
+}
+
+#banner .swiper-scrollbar-drag {
+    background-color: #ff5b38;
+}
+
+.banner3 {
+    position: relative;
+}
+
+.banner3_btn {
+    position: absolute;
+
+    left: 1625px;
+    bottom: 180px;
+    transform: translateX(-50%);
+
+    width: 200px;
+    height: 42px;
+
+    border: 3px solid #2558D8;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-weight: 500;
+
+    z-index: 5;
+}
+
+.banner3_btn:hover {
+    border: 3px solid #2558D8;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2558D8;
+    font-weight: 700;
+}
+
+/* =============== new arrival =============== */
+#new_arrival {
+    width: 1320px;
+    margin: 177px auto 0;
+
+    scroll-margin-top: 150px;
+}
+
+
+/* '레시피코리아 서체' 타이틀 공통 꾸미기 - 시작*/
+h2 img {
+    display: block;
+    margin-bottom: 50px;
+
+    position: relative;
+    z-index: 1;
+}
+/* '레시피코리아 서체' 타이틀 공통 꾸미기 - 끝 */
+
+
+.arrival_wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.arrival_wrap li {
+    position: relative;
+    /* .arrival_hover의 부모 */
+
+    cursor: pointer;
+}
+
+/* 호버 */
+.arrival_wrap .img_wrap:hover~.arrival_hover {
+    display: block;
+}
+
+.arrival_wrap .img_wrap {
+    width: 315px;
+}
+
+.arrival_wrap img {
+    display: block;
+
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.arrival_name {
+    width: 315px;
+    font-family: 'Paperlogy';
+    font-size: 22px;
+    font-weight: 600;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.DIY_badgeM::after {
+    content: "";
+     display: inline-block;
+
+    width: 50px;
+    height: 21px;
+
+    background: url(../images/new_arrival/DIY_badgeM.svg) no-repeat right center / contain;
+}
+
+.DIY_badgeL::after {
+    content: "";
+
+    width: 50px;
+    height: 21px;
+
+    background: url(../images/new_arrival/DIY_badgeL.svg) no-repeat right center / contain;
+}
+
+.arrival_level {
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 2px 0;
+
+    position: relative;
+    /* .level02 부모 */
+}
+
+.level02::after {
+    content: "";
+
+    width: 70px;
+    height: 10px;
+
+    background: url(../images/new_arrival/level02.svg) no-repeat right top / contain;
+
+    position: absolute;
+    /* .arrival_level 자식 */
+    top: 8px;
+    left: 50px;
+}
+
+.level03::after {
+    content: "";
+
+    width: 70px;
+    height: 10px;
+
+    background: url(../images/new_arrival/level03.svg) no-repeat right top / contain;
+
+    position: absolute;
+    /* .arrival_level 자식 */
+    top: 8px;
+    left: 50px;
+}
+
+.arrival_tag {
+    position: relative;
+}
+
+.tag1::before {
+    content: "";
+
+    display: block;
+
+    width: 92px;
+    height: 21px;
+
+    background: url(../images/new_arrival/pre-order.svg) no-repeat right top / contain;
+
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.tag2::before {
+    content: "";
+
+    display: block;
+
+    width: 68px;
+    height: 21px;
+
+    background: url(../images/new_arrival/limited.svg) no-repeat right top / contain;
+
+    position: absolute;
+    top: 5px;
+    left: 105px;
+}
+
+.tag3::before {
+    content: "";
+
+    display: block;
+
+    width: 68px;
+    height: 21px;
+
+    background: url(../images/new_arrival/order.svg) no-repeat right top / contain;
+
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.padding_price {
+    margin-top: 30px;
+}
+
+.arrival_price {
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 호버 숨기기 */
+.arrival_hover {
+    /* .arrival_wrap li 자식 */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    /* 마우스로 잡히는 대상에서 무시 */
+    pointer-events: none;
+}
+
+.arrival_hover img {
+    display: block;
+}
+
+/* =============== 경계선 line_ani 시작 =============== */
+
+.line_ani1 svg {
+    width: 100%;
+    display: block;
+    margin-top: 27px;
+}
+
+.line_ani1 path {
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+}
+
+.line_ani1.active path {
+    animation: drawLine1 2.5s ease forwards;
+}
+
+@keyframes drawLine1 {
+    from {
+        stroke-dashoffset: 4000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* =============== 경계선 line_ani 끝 =============== */
+
+
+/* =============== collection1 =============== */
+
+#collection1 h2 {
+    width: 1320px;
+    margin: 71px auto 0;
+    /* 추가로 여백+ */
+}
+
+.collection_background1 {
+    background: url(../images/collection/background1.png) no-repeat center top / 100% auto;
+    height: 880px;
+
+    padding-top: 44px;
+}
+
+.inner_collection1 {
+    width: 1620px;
+    height: 790px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------- 메인 화보 공통 꾸미기 - 시작 ---------- */
+.pic img {
+    display: block;
+    width: 925px;
+}
+
+/* ---------- 메인 화보 공통 꾸미기 - 끝 ---------- */
+
+#collection1 .collection_main {
+    position: relative;
+    /* 꾸미기 deco의 위치부모 */
+}
+
+/* 돼지꼬리 노랑------------------------------- */
+.deco1 svg {
+    display: block;
+    width: 128px;
+
+    position: absolute;
+    top: 10px;
+    right: -1030px;
+}
+
+.pig_tail1 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 1100;
+    animation: pigTailDraw 2s ease-in-out infinite;
+}
+
+@keyframes pigTailDraw {
+    from {
+        stroke-dashoffset: 900;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 파란" ------------------------------- */
+.deco2 svg {
+    display: block;
+    width: 70px;
+
+    position: absolute;
+    top: 120px;
+    left: 160px;
+}
+
+.blueline1,
+.blueline2 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 130;
+    animation: blueDraw 4s linear infinite;
+}
+
+.blueline1 {
+    animation-name: blueDraw1;
+}
+
+.blueline2 {
+    animation-name: blueDraw2;
+}
+
+@keyframes blueDraw1 {
+    0% {
+        stroke-dashoffset: 130;
+    }
+
+    5% {
+        stroke-dashoffset: 100;
+    }
+
+    20% {
+        stroke-dashoffset: 0;
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 130;
+    }
+}
+
+@keyframes blueDraw2 {
+
+    0%,
+    20% {
+        stroke-dashoffset: 130;
+    }
+
+    25% {
+        stroke-dashoffset: 100;
+    }
+
+    40% {
+        stroke-dashoffset: 0;
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 130;
+    }
+}
+
+/* 스마일 ------------------------------- */
+.deco3 svg {
+    display: block;
+    width: 133px;
+
+    position: absolute;
+    bottom: 25px;
+    right: -880px;
+}
+
+.eye1,
+.eye2,
+.mouth {
+    fill: none;
+}
+
+/* 왼쪽 눈 */
+.eye1 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 130;
+    animation: eyeDraw1 4s linear infinite;
+}
+
+@keyframes eyeDraw1 {
+    0% {
+        stroke-dashoffset: 130;
+    }
+
+    10% {
+        stroke-dashoffset: 130;
+    }
+
+    20% {
+        stroke-dashoffset: 0;
+    }
+
+    85% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 130;
+    }
+}
+
+/* 오른쪽 눈 */
+.eye2 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 130;
+    animation: eyeDraw2 4s linear infinite;
+}
+
+@keyframes eyeDraw2 {
+    0% {
+        stroke-dashoffset: 130;
+    }
+
+    20% {
+        stroke-dashoffset: 130;
+    }
+
+    30% {
+        stroke-dashoffset: 0;
+    }
+
+    85% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 130;
+    }
+}
+
+/* 입 */
+.mouth {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 500;
+    animation: mouthDraw 4s linear infinite;
+}
+
+@keyframes mouthDraw {
+    0% {
+        stroke-dashoffset: 500;
+    }
+
+    30% {
+        stroke-dashoffset: 500;
+    }
+
+    55% {
+        stroke-dashoffset: 0;
+    }
+
+    85% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
+
+
+
+#collection1 .collection_text {
+    width: 622px;
+    padding-top: 98px;
+
+    position: relative;
+    /* flower의 위치 부모 */
+}
+
+/* 배경 꽃1 */
+#collection1 .collection_text::after {
+    display: block;
+    content: "";
+    background: url(../images/collection/flower1.svg) no-repeat center / contain;
+    width: 166px;
+    height: 162px;
+
+    position: absolute;
+    top: 20px;
+    right: 170px;
+    z-index: 0;
+
+    animation: flowerFloat1 3s ease-in-out infinite;
+}
+
+@keyframes flowerFloat1 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(5px, -14px) rotate(4deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* 배경 꽃2 */
+#collection1 .collection_text::before {
+    display: block;
+    content: "";
+    background: url(../images/collection/flower2.svg) no-repeat center / contain;
+    width: 87px;
+    height: 85px;
+
+    position: absolute;
+    top: 120px;
+    right: 65px;
+    z-index: 0;
+
+    animation: flowerFloat2 4s ease-in-out infinite;
+}
+
+@keyframes flowerFloat2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-4px, -10px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+#collection1 .collection_text h3 {
+    margin-bottom: 33px;
+}
+
+#collection1 .collection_text h3 img {
+    width: 348px;
+
+    position: relative;
+    /* 꽃 그래픽과의 순서 */
+    z-index: 1;
+}
+
+#collection1 .collection_text .t {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* ---------------------  콜렉션1,2 키워드 공통 꾸미기 - 시작 */
+.keywords {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.keyword {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 4px 8px;
+}
+
+/* ---------------------  콜렉션1,2 키워드 공통 꾸미기 - 끝 */
+
+.keyword_ss {
+    width: max-content;
+}
+
+#collection1 .keyword {
+    background-color: #FFC227;
+}
+
+#collection1 .keyword1 {
+    margin-left: 0;
+}
+
+/* 키워드1 호버 시 반응 - 시작*/
+#collection1 .keyword1,
+#collection1 .keyword3,
+#collection1 .keyword5 {
+    transform: rotate(3deg);
+    transition: all 0.3s;
+}
+
+#collection1 .keyword1:hover,
+#collection1 .keyword3:hover,
+#collection1 .keyword5:hover {
+    transform: rotate(12deg);
+}
+
+#collection1 .keyword2,
+#collection1 .keyword4 {
+    transform: rotate(-3deg);
+    transition: all 0.3s;
+}
+
+#collection1 .keyword2:hover,
+#collection1 .keyword4:hover {
+    transform: rotate(-12deg);
+}
+
+/* 키워드1 호버 시 반응 - 끝*/
+
+/* 미니 슬라이더*/
+.mini_slide_wrap1 {
+    width: 692px;
+    height: 473px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+}
+
+.swiper.mini_slide1 {
+    /* swiper 또는 mini_slide라는 이름의 클래스에 적용 */
+    /* 띄어쓰기 안함!! */
+    width: 622px;
+    height: 473px;
+
+    margin: 0;
+    /* 기본 swiper margin 제거 */
+    flex-shrink: 0;
+    /* 크기줄어들지 않게 */
+}
+
+/* swiper 공통 꾸미기 - 시작 */
+.swiper-slide img {
+    width: 304px;
+    height: 473px;
+    display: block;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next img {
+    width: 25px;
+    display: block;
+}
+
+.swiper-button-next svg {
+    display: none;
+}
+
+/* swiper 공통 꾸미기 - 끝 */
+
+/* ---------------- 미니 이미지 호버(info) - 시작 ----------------*/
+.mini_img {
+    position: relative;
+    cursor: pointer;
+}
+
+.info {
+    width: 266px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 16px 19px 15px;
+
+    position: relative; /* wish(하트) 부모 */
+    position: absolute; /* .mini_img 자식 */
+    bottom: 0;
+    left: 0;
+
+    text-align: left;
+}
+
+.info_t {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini_name {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Paperlogy';
+}
+
+.mini_order img {
+    width: 66px;
+    height: 21px;
+}
+
+/* 위시리스트 버튼 */
+.wish_btn { 
+    position: absolute; /* 부모 info */
+    right: 20px;
+    bottom: 19px;
+
+    width: 27px;
+    height: 23px;
+
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* 검정하트 / 빨간하트 완전히 겹치기 */
+.wish_btn img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 27px;
+    height: 23px;
+}
+
+.wish_bf {
+    opacity: 1;
+}
+
+.wish_af {
+    opacity: 0;
+}
+
+/* 클릭 후 */
+.wish_btn.active .wish_bf {
+    opacity: 0;
+}
+
+.wish_btn.active .wish_af {
+    opacity: 1;
+
+    animation: wish_pop 0.35s ease;
+}
+
+/* 빨간 하트 뿅 */
+@keyframes wish_pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+/* ---------------- 미니 이미지 호버(info) - 끝 ----------------*/
+
+
+
+/* ---------------- 미니 이미지 호버(이미지) - 시작 ----------------*/
+#collection1 .pic {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#collection1 .pic.active {
+    display: block;
+}
+
+/* ---------------- 미니 이미지 호버(이미지) - 끝 ----------------*/
+
+
+
+/* =============== collection2 =============== */
+
+.collection_background2 {
+    background: url(../images/collection/background2.png) no-repeat center top / 100% auto;
+    height: 872px;
+
+    padding-top: 44px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+#collection2 {
+    overflow: hidden;
+}
+
+#collection2 .collection_main {
+    position: relative;
+    /* 미니 이미지 호버 부모 */
+}
+
+.inner_collection2 {
+    width: 1690px;
+    height: 790px;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+#collection2 .collection_text {
+    width: 713px;
+
+    margin-right: 70px;
+    padding-top: 83px;
+    /* 태그의 가로너비만 줘서 세로는 자동으로 계산이 되는데 콜렉션1,2의 태그 너비가 다르기 때문에 높이 오차가 생겨, 따로 값일 다르게 조정 */
+
+    text-align: right;
+}
+
+#collection2 h3 {
+    margin-bottom: 33px;
+
+    /* 꽃을 뒤에 두기위한 position */
+    position: relative;
+    z-index: 1;
+
+}
+
+#collection2 h3 img {
+    width: 419px;
+
+}
+
+#collection2 .t {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.keyword_fw {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+}
+
+.keyword_fw .keyword {
+    background-color: #FF5B38;
+
+    /* flex 공간이 부족해도 절대 줄어들지 않는 */
+    flex-shrink: 0;
+}
+
+#collection2 .keyword1,
+#collection2 .keyword3,
+#collection2 .keyword5 {
+    transform: rotate(3deg);
+    transition: all 0.3s;
+}
+
+#collection2 .keyword1:hover,
+#collection2 .keyword3:hover,
+#collection2 .keyword5:hover {
+    transform: rotate(12deg);
+}
+
+#collection2 .keyword2,
+#collection2 .keyword4 {
+    transform: rotate(-3deg);
+    transition: all 0.3s;
+}
+
+#collection2 .keyword2:hover,
+#collection2 .keyword4:hover {
+    transform: rotate(-12deg);
+}
+
+/* 배경 꽃3 */
+#collection2 .collection_text::before {
+    display: block;
+    content: "";
+    background: url(../images/collection/flower3.svg) no-repeat center / contain;
+    width: 166px;
+    height: 162px;
+
+    position: absolute;
+    top: 5px;
+    left: 220px;
+    z-index: 0;
+
+    animation: flowerFloat1 3s ease-in-out infinite;
+}
+
+
+/* 배경 꽃4 */
+#collection2 .collection_text::after {
+    display: block;
+    content: "";
+    background: url(../images/collection/flower4.svg) no-repeat center / contain;
+    width: 95px;
+    height: 93px;
+
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    z-index: 0;
+
+    animation: flowerFloat2 4s ease-in-out infinite;
+}
+
+/* 배경 꽃5 */
+#collection2 .collection_text h3::before {
+    display: block;
+    content: "";
+    background: url(../images/collection/flower5.svg) no-repeat center / contain;
+    width: 52px;
+    height: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    animation: flowerFloat5 2.5s ease-in-out infinite;
+}
+
+@keyframes flowerFloat5 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-3px, -12px) rotate(3deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* ---------------- 미니 이미지 호버(이미지) - 시작 ----------------*/
+#collection2 .pic {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+#collection2 .pic.active {
+    display: block;
+}
+
+/* ---------------- 미니 이미지 호버(이미지) - 끝 -----------------*/
+
+/* 돼지꼬리 초록 */
+.deco4 {
+    display: block;
+    width: 130px;
+
+    position: absolute;
+    top: 0;
+    left: 655px;
+
+}
+
+.pig_tail2 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 1100;
+    animation: pigTailDraw 2s ease-in-out infinite;
+}
+
+.flower_deco {
+    position: absolute;
+    width: 100%;
+    /* 부모가 아닌 자식으로 설정해 flower_deco들이 innder_collection2를 부모로 잡게끔함 */
+}
+
+.flower_deco1,
+.flower_deco2,
+.flower_deco3,
+.flower_deco4,
+.flower_deco5 {
+    position: absolute;
+}
+
+.flower_deco1 {
+    /* 주황 */
+    top: 170px;
+    right: 170px;
+
+    animation: float1 4.2s ease-in-out infinite;
+}
+
+@keyframes float1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(8px, -24px) rotate(6deg) scale(1.08);
+    }
+}
+
+.flower_deco2 {
+    /* 노랑 */
+    top: 260px;
+    right: 130px;
+
+    animation: float2 5s ease-in-out infinite;
+}
+
+@keyframes float2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-10px, -18px) rotate(-5deg) scale(1.12);
+    }
+}
+
+.flower_deco3 {
+    /* 파랑 */
+    top: 380px;
+    right: 740px;
+
+    animation: float3 4.6s ease-in-out infinite;
+}
+
+@keyframes float3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(12px, -30px) rotate(4deg) scale(1.06);
+    }
+}
+
+.flower_deco4 {
+    /* 핑크 */
+    top: 290px;
+    right: 200px;
+
+    animation: float4 5.4s ease-in-out infinite;
+}
+
+@keyframes float4 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-7px, -22px) rotate(-7deg) scale(1.1);
+    }
+}
+
+.flower_deco5 {
+    /* 흰 */
+    top: 450px;
+    right: 680px;
+
+    animation: float5 4.8s ease-in-out infinite;
+}
+
+@keyframes float5 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(6px, -16px) rotate(3deg) scale(1.14);
+    }
+}
+
+
+/* ---------------- 미니 이미지 호버(이미지) - 끝 ----------------*/
+
+/* 미니 swiper */
+.mini_slide_wrap2 {
+    width: 670px;
+    height: 473px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+
+    margin-left: auto;
+    /* 
+    1. 부모 안에서 왼쪽 여백을 가능한 만큼 자동으로 먹게 해서 결과적으로 오른쪽 끝으로 붙게함.
+
+    2. 박스 자체를 부모의 오른쪽으로 정렬
+    */
+}
+
+.swiper.mini_slide2 {
+    /* swiper 또는 mini_slide2라는 이름의 클래스에 적용 */
+    /* 띄어쓰기 안함!! */
+    width: 622px;
+    height: 473px;
+
+    margin: 0;
+    /* 기본 swiper margin 제거 */
+    flex-shrink: 0;
+    /* 크기줄어들지 않게 */
+}
+
+.mini_left {
+    margin-right: 30px;
+}
+
+.mini_left img {
+    display: block;
+    cursor: pointer;
+}
+
+/* =============== 경계면 애니메이션2 =============== */
+.line_ani2 {
+    width: 707px;
+
+    position: absolute;
+    /* 부모 = .story_background */
+    top: -100px;
+    left: 0;
+}
+
+.line_ani2 path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+.line_ani2.active path {
+    animation: drawLine2 2.5s ease forwards;
+}
+
+@keyframes drawLine2 {
+    from {
+        stroke-dashoffset: 2500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* =============== story =============== */
+
+#story {
+    scroll-margin-top: 100px;
+}
+
+.story_background {
+    background: url(../images/story/background.png) no-repeat center 400px / 100% auto;
+    height: 1000px;
+
+    position: relative;
+}
+
+.inner_story {
+    width: 1156px;
+    margin: 228px auto 0;
+    text-align: center;
+}
+
+.inner_story h2 {
+    line-height: 0;
+    /* display - inline으로 다시 생긴 공백 없애기 */
+}
+
+.inner_story h2 img {
+    display: inline;
+    width: 415px;
+}
+
+.story_img {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.story_img img {
+    display: block;
+}
+
+.story_img li:first-child img {
+    width: 601px;
+}
+
+.story_img li:nth-child(2) img {
+    width: 270px;
+}
+
+.story_img li:nth-child(3) img {
+    width: 270px;
+}
+
+.inner_story p {
+    margin-top: 39px;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.story_btn {
+    position: relative;
+    width: 178px;
+    height: 49px;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+
+.more_btn {
+    margin-top: 53px;
+    width: 159px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.more_flower {
+    position: absolute;
+    top: 30px;
+    right: -8px;
+    z-index: 1;
+
+    transform-origin: right top;
+    transition: transform 0.35s ease, fill 0.35s ease;
+}
+
+.more_flower path {
+    transition: fill 0.35s ease;
+}
+
+.story_btn:hover .more_flower {
+    transform: scale(3.1);
+}
+
+.story_btn:hover .more_flower path {
+    fill: #FF5B38;
+}
+
+/* =============== event =============== */
+.cloud1_wrap {
+    width: 100%;
+    height: 1181px;
+
+    position: relative;
+}
+
+#event h2 img {
+    width: 146px;
+
+    position: absolute;
+    top: 155px;
+    left: 300px;
+}
+
+.event_hover {
+    position: absolute;
+    inset: 0;
+
+    z-index: 5;
+}
+
+.event_title {
+    position: absolute;
+    top: 410px;
+    left: 565px;
+    z-index: 2;
+    cursor: pointer;
+
+    transition: transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.event_title img {
+    display: block;
+    width: 752px;
+
+    transform-origin: 50% 50%;
+
+    animation: titlePulse 1.3s ease-in-out infinite;
+
+    transition: transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes titlePulse {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+}
+
+/* 부모 div는 위로 이동 */
+.event_hover.active .event_title {
+    transform: translateY(-70px);
+}
+
+/* 실제 이미지는 중앙축으로 회전 */
+.event_hover.active .event_title img {
+    animation: none;
+    transform: rotate(0deg) scale(1);
+}
+
+/* 올라오는 이벤트 글 */
+.event_info {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+
+    opacity: 0;
+    transform: translate(-50%, 40px);
+
+    transition:
+        opacity 0.4s ease 0.2s,
+        transform 0.8s ease 0.2s;
+}
+
+.event_hover.active .event_info {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.event_info h3 img {
+    display: block;
+    width: 510px;
+    margin-bottom: 12px;
+}
+
+.event_info .yellow {
+    font-weight: 600;
+    color: #FFC227;
+}
+
+.event_flower {
+    position: absolute;
+
+    left: 50%;
+    top: 450px;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%) scale(0.2);
+
+    transition:
+        transform 1s cubic-bezier(.2, .9, .3, 1.25),
+        opacity 0.2s ease;
+
+    pointer-events: none;
+}
+
+/* event 타이틀 클릭 시, 꽃 최종 위치 */
+.event_hover.active .L_flower1 {
+    opacity: 1;
+
+    transform:
+        translate(420px, -250px) rotate(0) scale(1);
+
+    animation:
+        eventFlower1 3.2s ease-in-out 1.2s infinite;
+}
+
+@keyframes eventFlower1 {
+
+    0%,
+    100% {
+        transform:
+            translate(420px, -250px) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(425px, -265px) rotate(4deg) scale(1);
+    }
+}
+
+.event_hover.active .L_flower2 {
+    opacity: 1;
+
+    transform:
+        translate(-700px, -50px) rotate(0) scale(1);
+
+    animation:
+        eventFlower2 3.6s ease-in-out 1.3s infinite;
+}
+
+@keyframes eventFlower2 {
+
+    0%,
+    100% {
+        transform:
+            translate(-700px, -50px) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-705px, -65px) rotate(-4deg) scale(1);
+    }
+}
+
+.event_hover.active .S_flower1 {
+    /* 흰 */
+    opacity: 1;
+
+    transform:
+        translate(540px, -30px) rotate(-10deg) scale(.7);
+
+    animation:
+        eventFlower3 2.8s ease-in-out 1.35s infinite;
+}
+
+@keyframes eventFlower3 {
+
+    0%,
+    100% {
+        transform:
+            translate(540px, -30px) rotate(-10deg) scale(.7);
+    }
+
+    50% {
+        transform:
+            translate(545px, -42px) rotate(-4deg) scale(.7);
+    }
+}
+
+.event_hover.active .S_flower2 {
+    /* 주황 */
+    opacity: 1;
+
+    transform:
+        translate(-580px, -220px) rotate(12deg) scale(.65);
+
+    animation:
+        eventFlower4 3.4s ease-in-out 1.4s infinite;
+}
+
+@keyframes eventFlower4 {
+
+    0%,
+    100% {
+        transform:
+            translate(-580px, -220px) rotate(12deg) scale(.65);
+    }
+
+    50% {
+        transform:
+            translate(-575px, -234px) rotate(17deg) scale(.65);
+    }
+}
+
+.event_hover.active .S_flower3 {
+    /* 오-연두 */
+    opacity: 1;
+
+    transform:
+        translate(700px, -300px) rotate(-8deg) scale(.55);
+
+    animation:
+        eventFlower5 3s ease-in-out 1.45s infinite;
+}
+
+@keyframes eventFlower5 {
+
+    0%,
+    100% {
+        transform:
+            translate(700px, -300px) rotate(-8deg) scale(.55);
+    }
+
+    50% {
+        transform:
+            translate(705px, -312px) rotate(-3deg) scale(.55);
+    }
+}
+
+.event_hover.active .S_flower4 {
+    /* 왼-연두 */
+    opacity: 1;
+
+    transform:
+        translate(-750px, -150px) rotate(-8deg) scale(.55);
+
+    animation:
+        eventFlower6 3.7s ease-in-out 1.5s infinite;
+}
+
+@keyframes eventFlower6 {
+
+    0%,
+    100% {
+        transform:
+            translate(-750px, -150px) rotate(-8deg) scale(.55);
+    }
+
+    50% {
+        transform:
+            translate(-755px, -163px) rotate(-13deg) scale(.55);
+    }
+}
+
+/* 꽃 시간차 */
+.L_flower1 {
+    width: 180px;
+    transition-delay: 0.1s;
+}
+
+.L_flower2 {
+    width: 180px;
+    transition-delay: 0.15s;
+}
+
+.S_flower1 {
+    width: 65px;
+    transition-delay: 0.2s;
+}
+
+.S_flower2 {
+    width: 40px;
+    transition-delay: 0.25s;
+}
+
+.S_flower3 {
+    width: 40px;
+    transition-delay: 0.3s;
+}
+
+.S_flower4 {
+    width: 40px;
+    transition-delay: 0.35s;
+}
+
+
+/* 큰 구름 */
+.cloud1 img {
+    display: block;
+    width: 100%;
+    margin-top: 180px;
+
+    animation: cloudMove1 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes cloudMove1 {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0) scaleX(1) scaleY(1);
+    }
+
+    25% {
+        transform:
+            translate(4px, -2px) scaleX(1.015) scaleY(1.005);
+    }
+
+    50% {
+        transform:
+            translate(-3px, 2px) scaleX(1.005) scaleY(1.015);
+    }
+
+    75% {
+        transform:
+            translate(2px, -2px) scaleX(1.02) scaleY(1.008);
+    }
+}
+
+/* 작은1 구름 */
+.cloud2 {
+    position: absolute;
+    top: 1010px;
+    left: 750px;
+}
+
+.cloud2 img {
+    display: block;
+    width: 170px;
+
+    animation: cloudMove1 4s ease-in-out infinite;
+    animation-delay: -2s;
+    transform-origin: center;
+}
+
+/* 작은2 구름 */
+.cloud3 {
+    position: absolute;
+    top: 14px;
+    left: 898px;
+}
+
+.cloud3 img {
+    display: block;
+    width: 50px;
+
+    animation: cloudMove1 3s ease-in-out infinite;
+    animation-delay: -4s;
+    transform-origin: center;
+}
+
+/* ===================== sns ===================== */
+#sns {
+    width: 1920px;
+    height: 830px;
+    margin: 0 auto;
+
+    position: relative;
+
+    scroll-margin-top: 80px;
+}
+
+/* 주황 긴돼지꼬리 */
+.sns_line {
+    position: absolute;
+    top: 30px;
+    left: 485px;
+    z-index: 5;
+}
+
+.sns_line svg {
+    display: block;
+}
+
+.sns_line path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+}
+
+.sns_line.active path {
+    animation: snsLineDraw 7s ease forwards infinite;
+}
+
+@keyframes snsLineDraw {
+    0% {
+        stroke-dashoffset: 500;
+    }
+
+    12% {
+        stroke-dashoffset: 0;
+    }
+
+    88% {
+        stroke-dashoffset: 0;
+    }
+
+    96%,
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
+
+/* 초록색 선 */
+.sns_starline {
+    position: absolute;
+    top: 280px;
+    left: 1205px;
+    z-index: 5;
+}
+
+.sns_starline svg {
+    display: block;
+}
+
+.sns_starline path {
+    stroke-dasharray: 120;
+    stroke-dashoffset: -120;
+}
+
+.sns_starline.active path {
+    animation: drawGreenLine 7s ease forwards infinite;
+}
+
+@keyframes drawGreenLine {
+
+    0%,
+    12% {
+        stroke-dashoffset: -120;
+    }
+
+    18% {
+        stroke-dashoffset: 0;
+    }
+
+    88% {
+        stroke-dashoffset: 0;
+    }
+
+    96%,
+    100% {
+        stroke-dashoffset: -120;
+    }
+}
+
+/* 초록색 별 */
+.sns_star {
+    position: absolute;
+    top: 235px;
+    left: 1260px;
+    z-index: 5;
+}
+
+.sns_star svg {
+    display: block;
+}
+
+.sns_star path {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+}
+
+.sns_star.active path {
+    animation: drawGreenStar 7s ease forwards infinite;
+}
+
+@keyframes drawGreenStar {
+
+    0%,
+    18% {
+        stroke-dashoffset: 250;
+    }
+
+    30% {
+        stroke-dashoffset: 0;
+    }
+
+    88% {
+        stroke-dashoffset: 0;
+    }
+
+    96%,
+    100% {
+        stroke-dashoffset: 250;
+    }
+}
+
+/* 노란 하트 */
+.sns_heart {
+    position: absolute;
+    top: 740px;
+    left: 660px;
+    z-index: 5;
+}
+
+.sns_heart svg {
+    display: block;
+}
+
+.sns_heart path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+
+.sns_heart.active path {
+    animation: drawYellowHeart 7s ease forwards infinite;
+}
+
+@keyframes drawYellowHeart {
+
+    0%,
+    30% {
+        stroke-dashoffset: 300;
+    }
+
+    40% {
+        stroke-dashoffset: 0;
+    }
+
+    88% {
+        stroke-dashoffset: 0;
+    }
+
+    96%,
+    100% {
+        stroke-dashoffset: 300;
+    }
+}
+
+#sns h2 img {
+    width: 88px;
+}
+
+#sns h2 {
+    margin-left: 300px;
+}
+
+#sns p {
+    display: inline-block;
+
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 300px;
+
+    position: relative;
+    z-index: 0;
+
+    cursor: pointer;
+}
+
+#sns p::after {
+    content: "";
+
+    background: url(../images/sns/hover.svg) no-repeat right center / contain;
+    width: 19px;
+    height: 18px;
+
+    position: absolute;
+    top: -12px;
+    right: -20px;
+    z-index: -1;
+
+    transition: all 0.2s;
+}
+
+#sns p:hover::after {
+    transform: scale(2.8);
+    transform-origin: right top;
+}
+
+.insta_frame {
+    position: absolute;
+    top: 106px;
+    left: 751px;
+}
+
+.insta_frame img {
+    display: block;
+    width: 420px;
+}
+
+/* -------------- sns 슬라이드 ------------ */
+
+/*  전체 슬라이더 */
+.sns_slider_wrap {
+    width: 100%;
+    height: 508px;
+    margin: 60px auto;
+
+    position: relative;
+}
+
+/* 실제로 이미지 5장만 보이는 박스 */
+.sns_view {
+    width: 1677px;
+    height: 508px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+/* 이미지 7장의 전체 줄 */
+.sns_slider {
+    width: max-content;
+    /* 부모보다 자식의 너비값이 커서 원본을 유지하려면 넣어줘야함 */
+
+    height: 508px;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 35px;
+
+    transition: transform 0.55s ease;
+}
+
+/* 작은 이미지 */
+.sns_slider li {
+    width: 283px;
+    height: 353px;
+
+    flex-shrink: 0;
+
+    transition:
+        width 0.55s ease,
+        height 0.55s ease;
+}
+
+/* 가운데 이미지 */
+.sns_slider li.active {
+    width: 405px;
+    height: 508px;
+
+    z-index: 2;
+}
+
+/* 이미지 */
+.sns_slider li img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* 버튼 */
+.sns_slider_wrap .swiper-button-next {
+    right: 45px;
+    top: 331.5px;
+}
+
+.sns_slider_wrap .swiper-button-prev {
+    left: 45px;
+    top: 331.5px;
+}
+
+/* =============== footer =============== */
+.footer_bg {
+    margin-top: 200px;
+    width: 100%;
+    height: 400px;
+    background: url(../images/footer/footer_bg.png) no-repeat center;
+
+    position: relative;
+    /* .line의 부모 */
+}
+
+.inner_footer {
+    width: 1320px;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 47px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #ffffff;
+}
+
+.inner_footer li {
+    cursor: pointer;
+}
+
+.left_link ul {
+    display: flex;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.left_link ul li {
+    margin-right: 30px;
+}
+
+.newsletter p {
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    width: 381px;
+    height: 44px;
+    padding-left: 20px;
+    padding-right: 11px;
+    box-sizing: border-box;
+
+    background-color: #fffae6;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.newsletter button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.newsletter button img {
+    display: block;
+}
+
+input::placeholder {
+    color: #ff5b38;
+    font-size: 18px;
+}
+
+.right_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.right_link ul {
+    display: flex;
+}
+
+.right_link ul li {
+    margin-left: 30px;
+}
+
+.right_link ul li img {
+    display: block;
+    width: 52px;
+}
+
+.right_link .footer_nav {
+    margin-top: 46px;
+    font-weight: 500;
+}
+
+.right_link p {
+    margin-top: 13px;
+    font-size: 12px;
+}
+
+#footer .line {
+    position: absolute;
+    top: 131px;
+    left: 0;
+    z-index: 1;
+
+    pointer-events: none;
+    /* z-index로 인해 뉴스레터 포인트가 방해되니 라인 포인트 none 하기 */
+}
