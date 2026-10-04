@@ -1,3 +1,15 @@
+/* ---------- 인트로 영상 ---------- */
+const intro = document.querySelector('#intro');
+const introVideo = document.querySelector('#introVideo');
+const main = document.querySelector('#main');
+
+introVideo.addEventListener('ended', () => {
+
+  intro.classList.add('hide');
+  main.classList.add('show');
+
+});
+
 /* ---------- 스크롤 시 헤더 ---------- */
 const header = document.querySelector('header');
 

@@ -34,878 +34,904 @@
 <body>
     <div id="wrap">
 
-        <!-- ========== sidebar 사이드바 ========== -->
-        <ul class="side_bar">
-            <li> <img src="./images/side_bar/recent.svg" alt="recent"></li>
-            <li> <img src="./images/side_bar/chat.svg" alt="chat"></li>
-            <li> <a href="#wrap"><img src="./images/side_bar/top.svg" alt="top"></a></li>
-            <li> <a href="#footer"><img src="./images/side_bar/bottom.svg" alt="bottom"></a></li>
-        </ul>
+        <section class="intro" id="intro">
 
-        <!-- ========== header 헤더 ========== -->
-        <header>
-            <h1 class="logo">
-                <a href="#">
-                    <img src="./images/header/logo.svg" alt="logo">
-                </a>
-            </h1>
+            <video class="intro-video" autoplay muted playsinline id="introVideo">
+                <source src="./images/header/KOK_intro.mp4" type="video/mp4">
+            </video>
 
-            <ul class="gnb">
-                <li><a href="#new_arrival">신상품</a></li>
-                <li><a href="#collection1">콜렉션</a></li>
-                <li><a href="#story">브랜드소개</a></li>
-                <li><a href="#event">이벤트</a></li>
-                <li><a href="#sns">SNS</a></li>
+        </section>
+
+        <div class="main" id="main">
+            <!-- ========== sidebar 사이드바 ========== -->
+            <ul class="side_bar">
+                <li> <img src="./images/side_bar/recent.svg" alt="recent"></li>
+                <li> <img src="./images/side_bar/chat.svg" alt="chat"></li>
+                <li> <a href="#wrap"><img src="./images/side_bar/top.svg" alt="top"></a></li>
+                <li> <a href="#footer"><img src="./images/side_bar/bottom.svg" alt="bottom"></a></li>
             </ul>
 
+            <!-- ========== header 헤더 ========== -->
+            <header>
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./images/header/logo.svg" alt="logo">
+                    </a>
+                </h1>
 
-            <ul class="util">
-                <li class="search">
-                    <a href="#"><img src="./images/header/search2.svg" alt="search2"></a>
-                </li>
-                <li class="bag">
-                    <a href="#"><img src="./images/header/bag2.svg" alt="bag2"></a>
-                </li>
-                <li class="heart">
-                    <a href="#"><img src="./images/header/heart2.svg" alt="heart2"></a>
-                </li>
-                <li class="mypage">
-                    <a href="#"><img src="./images/header/mypage2.svg" alt="mypage2"></a>
-                </li>
-            </ul>
-        </header>
+                <ul class="gnb">
+                    <li><a href="#new_arrival">신상품</a></li>
+                    <li><a href="#collection1">콜렉션</a></li>
+                    <li><a href="#story">브랜드소개</a></li>
+                    <li><a href="#event">이벤트</a></li>
+                    <li><a href="#sns">SNS</a></li>
+                </ul>
 
-        <!-- ========== banner 배너 ========== -->
-        <div id="banner">
 
-            <div class="swiper banner-slider">
+                <ul class="util">
+                    <li class="search">
+                        <a href="#"><img src="./images/header/search2.svg" alt="search2"></a>
+                    </li>
+                    <li class="bag">
+                        <a href="#"><img src="./images/header/bag2.svg" alt="bag2"></a>
+                    </li>
+                    <li class="heart">
+                        <a href="#"><img src="./images/header/heart2.svg" alt="heart2"></a>
+                    </li>
+                    <li class="mypage">
+                        <a href="#"><img src="./images/header/mypage2.svg" alt="mypage2"></a>
+                    </li>
+                </ul>
+            </header>
 
-                <div class="swiper-wrapper">
+            <!-- ========== banner 배너 ========== -->
+            <div id="banner">
 
-                    <!-- 1번 배너 -->
-                    <div class="swiper-slide">
-                        <img src="./images/header/banner01.jpg" alt="banner01">
+                <div class="swiper banner-slider">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- 1번 배너 -->
+                        <div class="swiper-slide">
+                            <img src="./images/header/banner01.jpg" alt="banner01">
+                        </div>
+
+                        <!-- 2번 배너 -->
+                        <div class="swiper-slide">
+                            <img src="./images/header/banner02.jpg" alt="banner02">
+                        </div>
+
+                        <!-- 3번 배너 -->
+                        <div class="swiper-slide banner3">
+                            <img src="./images/header/banner03.jpg" alt="banner03">
+
+                            <a href="#" class="banner3_btn">
+                                CLASS 보러가기
+                            </a>
+                        </div>
+
                     </div>
 
-                    <!-- 2번 배너 -->
-                    <div class="swiper-slide">
-                        <img src="./images/header/banner02.jpg" alt="banner02">
+                    <div class="swiper-scrollbar swiper-scrollbar-horizontal">
+                        <div class="swiper-scrollbar-drag"
+                            style="width: 616.667px; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                        </div>
                     </div>
-
-                    <!-- 3번 배너 -->
-                    <div class="swiper-slide banner3">
-                        <img src="./images/header/banner03.jpg" alt="banner03">
-
-                        <a href="#" class="banner3_btn">
-                            CLASS 보러가기
-                        </a>
-                    </div>
-
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
-
-                <div class="swiper-scrollbar swiper-scrollbar-horizontal">
-                    <div class="swiper-scrollbar-drag"
-                        style="width: 616.667px; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
-                    </div>
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
-        </div>
 
-        <!-- ========== new arrival ========== -->
-        <div id="new_arrival">
-            <h2>
-                <img src="./images/new_arrival/NEW ARRIVAL.png" alt="title1">
-            </h2>
+            <!-- ========== new arrival ========== -->
+            <div id="new_arrival">
+                <h2>
+                    <img src="./images/new_arrival/NEW ARRIVAL.png" alt="title1">
+                </h2>
 
 
-            <ul class="arrival_wrap">
-                <li> <!-- 반다나 -->
-                    <div class="img_wrap">
-                        <img src="./images/new_arrival/new_arrival1.png" alt="arrival(1)">
-                    </div>
-
-                    <p class="arrival_name DIY_badgeM">
-                        데이지 도트 반다나 Kit
-                    </p>
-
-                    <p class="arrival_level level02">
-                        난이도
-                    </p>
-
-                    <p class="arrival_price">
-                        15,000원
-                    </p>
-
-                    <div class="arrival_hover">
-                        <div class="img">
-                            <img src="./images/new_arrival/new_arrival1-1.png" alt="new arrival1-1">
+                <ul class="arrival_wrap">
+                    <li> <!-- 반다나 -->
+                        <div class="img_wrap">
+                            <img src="./images/new_arrival/new_arrival1.png" alt="arrival(1)">
                         </div>
-                    </div>
-                </li>
 
-                <li> <!-- 니트 -->
-                    <div class="img_wrap">
-                        <img src="./images/new_arrival/new_arrival2.png" alt="arrival2">
-                    </div>
+                        <p class="arrival_name DIY_badgeM">
+                            데이지 도트 반다나 Kit
+                        </p>
 
-                    <p class="arrival_name DIY_badgeL">
-                        써니 플라워 니트 Kit
-                    </p>
+                        <p class="arrival_level level02">
+                            난이도
+                        </p>
 
-                    <p class="arrival_level level03">
-                        난이도
-                    </p>
+                        <p class="arrival_price">
+                            15,000원
+                        </p>
 
-                    <p class="arrival_price">
-                        32,000원
-                    </p>
-
-                    <div class="arrival_hover">
-                        <div class="img">
-                            <img src="./images/new_arrival/new_arrival2-1.png" alt="new arrival2-1">
-                        </div>
-                    </div>
-                </li>
-
-                <li> <!-- 헤어핀 -->
-                    <div class="img_wrap">
-                        <img src="./images/new_arrival/new_arrival3.png" alt="arrival3">
-                    </div>
-
-                    <p class="arrival_name">
-                        윈터 오너먼트 헤어핀 Set
-                    </p>
-
-                    <p class="arrival_tag">
-                        <span class="tag1"> </span>
-                        <span class="tag2"> </span>
-                    </p>
-
-
-                    <p class="arrival_price padding_price">
-                        29,000원
-                    </p>
-
-                    <div class="arrival_hover">
-                        <div class="img">
-                            <img src="./images/new_arrival/new_arrival3-1.png" alt="new arrival3-1">
-                        </div>
-                    </div>
-                </li>
-
-                <li> <!-- 가방 -->
-                    <div class="img_wrap">
-                        <img src="./images/new_arrival/new_arrival4.png" alt="arrival4">
-                    </div>
-
-                    <p class="arrival_name">
-                        토마토마 호보백
-                    </p>
-
-                    <p class="arrival_tag">
-                        <span class="tag3"> </span>
-                    </p>
-
-                    <p class="arrival_price padding_price">
-                        68,000원
-                    </p>
-
-                    <div class="arrival_hover">
-                        <div class="img">
-                            <img src="./images/new_arrival/new_arrival4-1.png" alt="new arrival(4-1)">
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 경계선 애니메이션 -->
-    <div class="line_ani1">
-        <svg width="1920" height="200" viewBox="0 0 1920 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M-54 188.232C-0.0823631 205.298 116.576 210.667 151.867 95.6204C195.982 -48.1881 22.7918 -3.18678 72.7881 81.5983C122.784 166.383 427.56 161.032 595.953 121.056C1078.5 6.49878 1877.02 18.799 2002.5 159.999"
-                stroke="#FF5B38" stroke-width="5" />
-        </svg>
-
-    </div>
-
-    <!-- ========== collection1 ========== -->
-    <div id="collection1">
-
-        <h2>
-            <img src="./images/collection/COLLECTION.svg" alt="COLLECTION">
-        </h2>
-
-        <div class="collection_background1"> <!-- 100% 주황 배경 -->
-
-            <div class="inner_collection1"> <!-- ❤️❤️ -->
-
-                <!-- 메인 화보 이미지 박스 - 시작 ❤️-->
-                <div class="collection_main" data-aos="fade-right" data-aos-delay="100">
-
-                    <!-- pic1 -->
-                    <div class="pic pic1 active">
-                        <img src="./images/collection/collection1.png" alt="collection1">
-                    </div>
-
-                    <!-- pic2 -->
-                    <div class="pic pic2">
-                        <img src="./images/collection/collection2.png" alt="collection2">
-                    </div>
-
-                    <!-- pic3 -->
-                    <div class="pic pic3">
-                        <img src="./images/collection/collection3.png" alt="collection3">
-                    </div>
-                    <!-- 메인 화보 이미지 박스 - 끝 -->
-
-
-                    <div class="deco1"> <!-- 돼지꼬리 노랑-->
-                        <svg width="145" height="81" viewBox="0 0 145 81" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path class="pig_tail1"
-                                d="M7.4999 26.6587C62.1172 -25.0315 103.639 41.6098 85.0414 65.7174C73.6696 80.4583 55.0214 71.3996 48.9717 60.9643C36.4129 36.5349 74.5657 16.7386 100.113 28.2536C125.012 39.4765 135.588 58.2449 137.06 68.0744"
-                                stroke="#FFC940" stroke-width="15" stroke-linecap="round" />
-                        </svg>
-                    </div>
-
-                    <div class="deco2"> <!-- 파란" -->
-                        <svg width="71" height="73" viewBox="0 0 71 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="blueline1" d="M47.0015 14.0015L57.0015 29.0015" stroke="#2558D8"
-                                stroke-width="28" stroke-linecap="round" />
-                            <path class="blueline2" d="M14.0015 48.8108L28.9615 58.8706" stroke="#2558D8"
-                                stroke-width="28" stroke-linecap="round" />
-                        </svg>
-
-                    </div>
-
-                    <div class="deco3"> <!-- 스마일 -->
-                        <svg width="139" height="124" viewBox="0 0 139 124" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path class="mouth"
-                                d="M12.5029 71.0032C20.8363 88.8365 48.3029 121.303 91.5029 108.503C134.703 95.7032 127.836 55.5032 119.003 37.0032"
-                                stroke="white" stroke-width="25" stroke-linecap="round" />
-                            <path class="eye1" d="M27.5029 23.0032L28.0029 24.0032" stroke="white" stroke-width="28"
-                                stroke-linecap="round" />
-                            <path class="eye2" d="M80.5029 14.0032L81.0029 15.0032" stroke="white" stroke-width="28"
-                                stroke-linecap="round" />
-                        </svg>
-
-                    </div>
-
-                </div>
-
-                <div class="collection_text" data-aos="fade-right" data-aos-delay="400"> <!-- ❤️ -->
-                    <h3>
-                        <img src="./images/collection/title1.svg" alt="title1">
-                    </h3>
-
-                    <p class="t">
-                        싱그러운 햇살과 바람사이,
-                        <br>
-                        크로셰 레이어드 룩으로 완성하는 피크닉 데이.🌷
-                    </p>
-
-                    <div class="keywords keyword_ss">
-                        <span class="keyword keyword1">#picnic</span>
-                        <span class="keyword keyword2">#layered</span>
-                        <span class="keyword keyword3">#spring sun</span>
-                        <span class="keyword keyword4">#soft summer</span>
-                        <span class="keyword keyword5">#little flower</span>
-                    </div>
-
-                    <!-- 미니 슬라이드 + 버튼의 박스 -->
-                    <div class="mini_slide_wrap1">
-
-                        <!-- 미니 Swiper -->
-                        <div class="swiper    mini_slide1">
-
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide    
-                                mini_img
-                                mini_img1">
-
-                                    <div class="info">
-                                        <!-- 정보 -->
-                                        <div class="info_t">
-                                            <p class="mini_name">체리콕 가디건</p>
-
-                                            <div class="mini_order">
-                                                <img src="./images/collection/order.svg" alt="order">
-                                            </div>
-
-                                            <p class="mini_price">159,000원</p>
-                                        </div>
-
-                                        <!-- 위시리스트 -->
-                                       <div class="wish_btn">
-                                            <img class="wish_bf" src="./images/collection/wish_bf.svg" alt="wish_bf">
-
-                                            <img class="wish_af" src="./images/collection/wish_af.svg" alt="wish_af">
-                                        </div>
-                                    </div>
-
-                                    <!-- 미니 이미지1 -->
-                                    <img class="mini_collection1" src="./images/collection/mini_collection1.png"
-                                        alt="mini_collection1">
-                                </div>
-
-                                <div class="swiper-slide 
-                                 mini_img  
-                                 mini_img2">
-
-                                    <div class="info">
-                                        <!-- 정보 -->
-                                        <div class="info_t">
-                                            <p class="mini_name">튤립 가든 베스트</p>
-
-                                            <div class="mini_order">
-                                                <img src="./images/collection/order.svg" alt="order">
-                                            </div>
-
-                                            <p class="mini_price">129,000원</p>
-                                        </div>
-
-                                        <!-- 위시리스트 -->
-                                        <div class="wish_btn">
-                                            <img class="wish_bf" src="./images/collection/wish_bf.svg" alt="wish_bf">
-
-                                            <img class="wish_af" src="./images/collection/wish_af.svg" alt="wish_af">
-                                        </div>
-                                    </div>
-
-                                    <!-- 미니 이미지2 -->
-                                    <img src="./images/collection/mini_collection2.png" alt="mini_collection2">
-                                </div>
-
-                                <div class="swiper-slide    
-                                mini_img
-                                mini_img3">
-
-                                    <div class="info">
-                                        <!-- 정보 -->
-                                        <div class="info_t">
-                                            <p class="arrival_name DIY_badgeM">
-                                                데이지 도트 반다나 Kit
-                                            </p>
-
-                                            <p class="arrival_level level02">
-                                                난이도
-                                            </p>
-
-                                            <p class="mini_price">
-                                                15,000원
-                                            </p>
-                                        </div>
-
-                                        <!-- 위시리스트 -->
-                                        <div class="wish_btn">
-                                            <img class="wish_bf" src="./images/collection/wish_bf.svg" alt="wish_bf">
-
-                                            <img class="wish_af" src="./images/collection/wish_af.svg" alt="wish_af">
-                                        </div>
-                                    </div>
-
-                                    <!-- 미니 이미지3 -->
-                                    <img src="./images/collection/mini_collection3.png" alt="mini_collection3">
-                                </div>
-
+                        <div class="arrival_hover">
+                            <div class="img">
+                                <img src="./images/new_arrival/new_arrival1-1.png" alt="new arrival1-1">
                             </div>
                         </div>
+                    </li>
 
-                        <!-- 버튼 -->
-                        <div class="swiper-button-next mini_right">
-                            <img src="./images/collection/right_button.svg" alt="right_button">
+                    <li> <!-- 니트 -->
+                        <div class="img_wrap">
+                            <img src="./images/new_arrival/new_arrival2.png" alt="arrival2">
                         </div>
 
-                    </div>
+                        <p class="arrival_name DIY_badgeL">
+                            써니 플라워 니트 Kit
+                        </p>
 
-                </div>
+                        <p class="arrival_level level03">
+                            난이도
+                        </p>
 
-            </div>
+                        <p class="arrival_price">
+                            32,000원
+                        </p>
 
-        </div>
-
-    </div>
-
-    <!-- ========== collection2 ========== -->
-
-    <div id="collection2">
-
-        <div class="collection_background2"> <!-- 100% 노랑 배경 -->
-
-            <div class="inner_collection2">
-
-                <!-- 왼쪽 정보 -->
-                <div class="collection_text" data-aos="fade-left" data-aos-delay="400">
-
-                    <h3>
-                        <img src="./images/collection/title2.svg" alt="title2">
-                    </h3>
-
-                    <p class="t">
-                        낮아진 햇살이 머무는 소녀의 방에서 마주친 인형처럼,
-                        <br>
-                        🐻 포근하고 사랑스러운 포인트 스타일링.
-                    </p>
-
-                    <div class="keywords keyword_fw">
-                        <span class="keyword keyword1">#little girl</span>
-                        <span class="keyword keyword2">#adorable dool</span>
-                        <span class="keyword keyword3">#point</span>
-                        <span class="keyword keyword4">#cozy crochet</span>
-                        <span class="keyword keyword5">#vintage room</span>
-                    </div>
-
-                    <!-- 전체 미니 슬라이드2 박스 -->
-                    <div class="mini_slide_wrap2">
-
-                        <!-- 버튼 -->
-                        <div class="mini_left">
-                            <img src="./images/collection/left_button.svg" alt="right_button">
-                        </div>
-
-                        <!-- 미니 Swiper -->
-                        <div class="swiper mini_slide2">
-
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide
-                                mini_img
-                                mini_img4">
-
-                                    <div class="info">
-                                        <!-- 정보 -->
-                                        <div>
-                                            <p class="mini_name">몽글구름 목도리</p>
-
-                                            <p class="arrival_tag">
-                                                <span class="tag1"> </span>
-                                                <span class="tag2"> </span>
-                                            </p>
-
-
-                                            <p class="arrival_price padding_price">
-                                                98,000원
-                                            </p>
-                                        </div>
-
-                                        <!-- 위시리스트 -->
-                                        <div class="wish_btn">
-                                            <img class="wish_bf" src="./images/collection/wish_bf.svg" alt="wish_bf">
-
-                                            <img class="wish_af" src="./images/collection/wish_af.svg" alt="wish_af">
-                                        </div>
-                                    </div>
-
-                                    <!-- 미니 이미지4 -->
-                                    <img src="./images/collection/mini_collection4.png" alt="mini_collection5">
-                                </div>
-
-                                <div class="swiper-slide
-                                mini_img
-                                mini_img5">
-
-                                    <div class="info">
-                                        <!-- 정보 -->
-                                        <div class="info_t">
-                                            <p class="mini_name">레드 돌 Set</p>
-
-                                            <div class="mini_order">
-                                                <img src="./images/collection/order.svg" alt="order">
-                                            </div>
-
-
-                                            <p class="mini_price">
-                                                59,000원
-                                            </p>
-                                        </div>
-
-                                        <!-- 위시리스트 -->
-                                        <div class="wish_btn">
-                                            <img class="wish_bf" src="./images/collection/wish_bf.svg" alt="wish_bf">
-
-                                            <img class="wish_af" src="./images/collection/wish_af.svg" alt="wish_af">
-                                        </div>
-                                    </div>
-
-                                    <!-- 미니 이미지5 -->
-                                    <img src="./images/collection/mini_collection5.png" alt="mini_collection4">
-                                </div>
-
-                                <div class="swiper-slide
-                                mini_img
-                                mini_img6">
-
-                                    <div class="info">
-                                        <!-- 정보 -->
-                                        <div>
-                                            <p class="mini_name">윈터 오너먼트 헤어핀 Set</p>
-
-                                            <p class="arrival_tag">
-                                                <span class="tag1"> </span>
-                                                <span class="tag2"> </span>
-                                            </p>
-
-
-                                            <p class="arrival_price padding_price">
-                                                29,000원
-                                            </p>
-                                        </div>
-
-                                        <!-- 위시리스트 -->
-                                        <div class="wish_btn">
-                                            <img class="wish_bf" src="./images/collection/wish_bf.svg" alt="wish_bf">
-
-                                            <img class="wish_af" src="./images/collection/wish_af.svg" alt="wish_af">
-                                        </div>
-                                    </div>
-
-                                    <!-- 미니 이미지6 -->
-                                    <img src="./images/collection/mini_collection6.png" alt="mini_collection6">
-                                </div>
-
+                        <div class="arrival_hover">
+                            <div class="img">
+                                <img src="./images/new_arrival/new_arrival2-1.png" alt="new arrival2-1">
                             </div>
+                        </div>
+                    </li>
 
+                    <li> <!-- 헤어핀 -->
+                        <div class="img_wrap">
+                            <img src="./images/new_arrival/new_arrival3.png" alt="arrival3">
                         </div>
 
-                    </div>
+                        <p class="arrival_name">
+                            윈터 오너먼트 헤어핀 Set
+                        </p>
 
-                </div>
-
-                <!-- 화보 이미지2 -->
-                <div class="collection_main" data-aos="fade-left" data-aos-delay="100">
-
-                    <!-- pic4 -->
-                    <div class="pic pic4 active">
-                        <img src="./images/collection/collection4.png" alt="collection4">
-                    </div>
-
-                    <!-- pic5 -->
-                    <div class="pic pic5">
-                        <img src="./images/collection/collection5.png" alt="collection5">
-                    </div>
-
-                    <!-- pic6 -->
-                    <div class="pic pic6">
-                        <img src="./images/collection/collection6.png" alt="collection6">
-                    </div>
+                        <p class="arrival_tag">
+                            <span class="tag1"> </span>
+                            <span class="tag2"> </span>
+                        </p>
 
 
-                    <!-- 콜렉션2 꾸미기 -->
-                    <div class="deco4"> <!-- 돼지꼬리 초록-->
-                        <svg width="145" height="79" viewBox="0 0 145 79" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path class="pig_tail2"
-                                d="M137.291 28.6759C86.4923 -25.2629 41.8749 37.9394 58.804 62.7064C69.1556 77.8506 88.0122 69.9956 94.5541 60.0732C108.291 36.7538 71.8819 15.1204 46.0996 25.0009C20.9713 34.6307 9.50609 52.4939 7.50143 62.0796"
-                                stroke="#3E8B47" stroke-width="15" stroke-linecap="round" />
-                        </svg>
-                    </div>
+                        <p class="arrival_price padding_price">
+                            29,000원
+                        </p>
 
-                    <div class="flower_deco">
-                        <!-- 주황 -->
-                        <img class="flower_deco1" src="./images/collection/deco1.svg" alt="deco1">
+                        <div class="arrival_hover">
+                            <div class="img">
+                                <img src="./images/new_arrival/new_arrival3-1.png" alt="new arrival3-1">
+                            </div>
+                        </div>
+                    </li>
 
-                        <!-- 노랑 -->
-                        <img class="flower_deco2" src="./images/collection/deco2.svg" alt="deco2">
+                    <li> <!-- 가방 -->
+                        <div class="img_wrap">
+                            <img src="./images/new_arrival/new_arrival4.png" alt="arrival4">
+                        </div>
 
-                        <!-- 파랑 -->
-                        <img class="flower_deco3" src="./images/collection/deco3.svg" alt="deco3">
+                        <p class="arrival_name">
+                            토마토마 호보백
+                        </p>
 
-                        <!-- 핑크 -->
-                        <img class="flower_deco4" src="./images/collection/deco4.svg" alt="deco4">
+                        <p class="arrival_tag">
+                            <span class="tag3"> </span>
+                        </p>
 
-                        <!-- 흰 -->
-                        <img class="flower_deco5" src="./images/collection/deco5.svg" alt="deco5">
-                    </div>
-                </div>
+                        <p class="arrival_price padding_price">
+                            68,000원
+                        </p>
 
+                        <div class="arrival_hover">
+                            <div class="img">
+                                <img src="./images/new_arrival/new_arrival4-1.png" alt="new arrival(4-1)">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
-        </div>
-
-    </div>
-
-    <!-- ========== story ========== -->
-    <div id="story">
-        <div class="story_background"> <!-- 100% 초록구름 배경 -->
 
             <!-- 경계선 애니메이션 -->
-            <div class="line_ani2">
-                <svg width="707" height="120" viewBox="0 0 707 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="line_ani1">
+                <svg width="1920" height="200" viewBox="0 0 1920 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        d="M-67 43.8359C-19.5541 85.016 57.7872 144.065 240.5 102.269C451.697 53.9558 520.5 -33.7314 703.799 18.6436"
-                        stroke="#FF5B38" stroke-width="5" stroke-linecap="round" />
+                        d="M-54 188.232C-0.0823631 205.298 116.576 210.667 151.867 95.6204C195.982 -48.1881 22.7918 -3.18678 72.7881 81.5983C122.784 166.383 427.56 161.032 595.953 121.056C1078.5 6.49878 1877.02 18.799 2002.5 159.999"
+                        stroke="#FF5B38" stroke-width="5" />
                 </svg>
 
             </div>
 
+            <!-- ========== collection1 ========== -->
+            <div id="collection1">
 
-            <div class="inner_story">
+                <h2>
+                    <img src="./images/collection/COLLECTION.svg" alt="COLLECTION">
+                </h2>
 
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <h2>
-                        <img src="./images/story/HELLO, WE’RE KOK..png" alt="title">
-                    </h2>
+                <div class="collection_background1"> <!-- 100% 주황 배경 -->
+
+                    <div class="inner_collection1"> <!-- ❤️❤️ -->
+
+                        <!-- 메인 화보 이미지 박스 - 시작 ❤️-->
+                        <div class="collection_main" data-aos="fade-right" data-aos-delay="100">
+
+                            <!-- pic1 -->
+                            <div class="pic pic1 active">
+                                <img src="./images/collection/collection1.png" alt="collection1">
+                            </div>
+
+                            <!-- pic2 -->
+                            <div class="pic pic2">
+                                <img src="./images/collection/collection2.png" alt="collection2">
+                            </div>
+
+                            <!-- pic3 -->
+                            <div class="pic pic3">
+                                <img src="./images/collection/collection3.png" alt="collection3">
+                            </div>
+                            <!-- 메인 화보 이미지 박스 - 끝 -->
 
 
-                    <ul class="story_img">
-                        <li>
-                            <img src="./images/story/story1.png" alt="story1">
-                        </li>
-                        <li>
-                            <img src="./images/story/story2.png" alt="story2">
-                        </li>
-                        <li>
-                            <img src="./images/story/story3.png" alt="story3">
-                        </li>
-                    </ul>
+                            <div class="deco1"> <!-- 돼지꼬리 노랑-->
+                                <svg width="145" height="81" viewBox="0 0 145 81" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="pig_tail1"
+                                        d="M7.4999 26.6587C62.1172 -25.0315 103.639 41.6098 85.0414 65.7174C73.6696 80.4583 55.0214 71.3996 48.9717 60.9643C36.4129 36.5349 74.5657 16.7386 100.113 28.2536C125.012 39.4765 135.588 58.2449 137.06 68.0744"
+                                        stroke="#FFC940" stroke-width="15" stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <div class="deco2"> <!-- 파란" -->
+                                <svg width="71" height="73" viewBox="0 0 71 73" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="blueline1" d="M47.0015 14.0015L57.0015 29.0015" stroke="#2558D8"
+                                        stroke-width="28" stroke-linecap="round" />
+                                    <path class="blueline2" d="M14.0015 48.8108L28.9615 58.8706" stroke="#2558D8"
+                                        stroke-width="28" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+
+                            <div class="deco3"> <!-- 스마일 -->
+                                <svg width="139" height="124" viewBox="0 0 139 124" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="mouth"
+                                        d="M12.5029 71.0032C20.8363 88.8365 48.3029 121.303 91.5029 108.503C134.703 95.7032 127.836 55.5032 119.003 37.0032"
+                                        stroke="white" stroke-width="25" stroke-linecap="round" />
+                                    <path class="eye1" d="M27.5029 23.0032L28.0029 24.0032" stroke="white"
+                                        stroke-width="28" stroke-linecap="round" />
+                                    <path class="eye2" d="M80.5029 14.0032L81.0029 15.0032" stroke="white"
+                                        stroke-width="28" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="collection_text" data-aos="fade-right" data-aos-delay="400"> <!-- ❤️ -->
+                            <h3>
+                                <img src="./images/collection/title1.svg" alt="title1">
+                            </h3>
+
+                            <p class="t">
+                                싱그러운 햇살과 바람사이,
+                                <br>
+                                크로셰 레이어드 룩으로 완성하는 피크닉 데이.🌷
+                            </p>
+
+                            <div class="keywords keyword_ss">
+                                <span class="keyword keyword1">#picnic</span>
+                                <span class="keyword keyword2">#layered</span>
+                                <span class="keyword keyword3">#spring sun</span>
+                                <span class="keyword keyword4">#soft summer</span>
+                                <span class="keyword keyword5">#little flower</span>
+                            </div>
+
+                            <!-- 미니 슬라이드 + 버튼의 박스 -->
+                            <div class="mini_slide_wrap1">
+
+                                <!-- 미니 Swiper -->
+                                <div class="swiper    mini_slide1">
+
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide    
+                                mini_img
+                                mini_img1">
+
+                                            <div class="info">
+                                                <!-- 정보 -->
+                                                <div class="info_t">
+                                                    <p class="mini_name">체리콕 가디건</p>
+
+                                                    <div class="mini_order">
+                                                        <img src="./images/collection/order.svg" alt="order">
+                                                    </div>
+
+                                                    <p class="mini_price">159,000원</p>
+                                                </div>
+
+                                                <!-- 위시리스트 -->
+                                                <div class="wish_btn">
+                                                    <img class="wish_bf" src="./images/collection/wish_bf.svg"
+                                                        alt="wish_bf">
+
+                                                    <img class="wish_af" src="./images/collection/wish_af.svg"
+                                                        alt="wish_af">
+                                                </div>
+                                            </div>
+
+                                            <!-- 미니 이미지1 -->
+                                            <img class="mini_collection1" src="./images/collection/mini_collection1.png"
+                                                alt="mini_collection1">
+                                        </div>
+
+                                        <div class="swiper-slide 
+                                 mini_img  
+                                 mini_img2">
+
+                                            <div class="info">
+                                                <!-- 정보 -->
+                                                <div class="info_t">
+                                                    <p class="mini_name">튤립 가든 베스트</p>
+
+                                                    <div class="mini_order">
+                                                        <img src="./images/collection/order.svg" alt="order">
+                                                    </div>
+
+                                                    <p class="mini_price">129,000원</p>
+                                                </div>
+
+                                                <!-- 위시리스트 -->
+                                                <div class="wish_btn">
+                                                    <img class="wish_bf" src="./images/collection/wish_bf.svg"
+                                                        alt="wish_bf">
+
+                                                    <img class="wish_af" src="./images/collection/wish_af.svg"
+                                                        alt="wish_af">
+                                                </div>
+                                            </div>
+
+                                            <!-- 미니 이미지2 -->
+                                            <img src="./images/collection/mini_collection2.png" alt="mini_collection2">
+                                        </div>
+
+                                        <div class="swiper-slide    
+                                mini_img
+                                mini_img3">
+
+                                            <div class="info">
+                                                <!-- 정보 -->
+                                                <div class="info_t">
+                                                    <p class="arrival_name DIY_badgeM">
+                                                        데이지 도트 반다나 Kit
+                                                    </p>
+
+                                                    <p class="arrival_level level02">
+                                                        난이도
+                                                    </p>
+
+                                                    <p class="mini_price">
+                                                        15,000원
+                                                    </p>
+                                                </div>
+
+                                                <!-- 위시리스트 -->
+                                                <div class="wish_btn">
+                                                    <img class="wish_bf" src="./images/collection/wish_bf.svg"
+                                                        alt="wish_bf">
+
+                                                    <img class="wish_af" src="./images/collection/wish_af.svg"
+                                                        alt="wish_af">
+                                                </div>
+                                            </div>
+
+                                            <!-- 미니 이미지3 -->
+                                            <img src="./images/collection/mini_collection3.png" alt="mini_collection3">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- 버튼 -->
+                                <div class="swiper-button-next mini_right">
+                                    <img src="./images/collection/right_button.svg" alt="right_button">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <p>
-                        수 많은 옷보다, 나만의 스타일을 만들어주는 하나의 포인트.
-                        <br>
-                        콕은 한 코 한 코 직접 엮어 만든 크로셰 아이템으로 익숙한 일상에 새로운 포인트를 더합니다.
-                        <br>
-                        나의 손으로 만들어가는 또 하나의 포인트.
-                        <br>
-                        콕의 감성을 직접 완성할 수 있는 DIY KIT도 함께합니다.
-                    </p>
+            </div>
 
-                    <div class="story_btn">
-                        <img class="more_btn" src="./images/story/button.png" alt="button">
+            <!-- ========== collection2 ========== -->
 
-                        <svg class="more_flower" width="19" height="18" viewBox="0 0 19 18" fill="none"
+            <div id="collection2">
+
+                <div class="collection_background2"> <!-- 100% 노랑 배경 -->
+
+                    <div class="inner_collection2">
+
+                        <!-- 왼쪽 정보 -->
+                        <div class="collection_text" data-aos="fade-left" data-aos-delay="400">
+
+                            <h3>
+                                <img src="./images/collection/title2.svg" alt="title2">
+                            </h3>
+
+                            <p class="t">
+                                낮아진 햇살이 머무는 소녀의 방에서 마주친 인형처럼,
+                                <br>
+                                🐻 포근하고 사랑스러운 포인트 스타일링.
+                            </p>
+
+                            <div class="keywords keyword_fw">
+                                <span class="keyword keyword1">#little girl</span>
+                                <span class="keyword keyword2">#adorable dool</span>
+                                <span class="keyword keyword3">#point</span>
+                                <span class="keyword keyword4">#cozy crochet</span>
+                                <span class="keyword keyword5">#vintage room</span>
+                            </div>
+
+                            <!-- 전체 미니 슬라이드2 박스 -->
+                            <div class="mini_slide_wrap2">
+
+                                <!-- 버튼 -->
+                                <div class="mini_left">
+                                    <img src="./images/collection/left_button.svg" alt="right_button">
+                                </div>
+
+                                <!-- 미니 Swiper -->
+                                <div class="swiper mini_slide2">
+
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide
+                                mini_img
+                                mini_img4">
+
+                                            <div class="info">
+                                                <!-- 정보 -->
+                                                <div>
+                                                    <p class="mini_name">몽글구름 목도리</p>
+
+                                                    <p class="arrival_tag">
+                                                        <span class="tag1"> </span>
+                                                        <span class="tag2"> </span>
+                                                    </p>
+
+
+                                                    <p class="arrival_price padding_price">
+                                                        98,000원
+                                                    </p>
+                                                </div>
+
+                                                <!-- 위시리스트 -->
+                                                <div class="wish_btn">
+                                                    <img class="wish_bf" src="./images/collection/wish_bf.svg"
+                                                        alt="wish_bf">
+
+                                                    <img class="wish_af" src="./images/collection/wish_af.svg"
+                                                        alt="wish_af">
+                                                </div>
+                                            </div>
+
+                                            <!-- 미니 이미지4 -->
+                                            <img src="./images/collection/mini_collection4.png" alt="mini_collection5">
+                                        </div>
+
+                                        <div class="swiper-slide
+                                mini_img
+                                mini_img5">
+
+                                            <div class="info">
+                                                <!-- 정보 -->
+                                                <div class="info_t">
+                                                    <p class="mini_name">레드 돌 Set</p>
+
+                                                    <div class="mini_order">
+                                                        <img src="./images/collection/order.svg" alt="order">
+                                                    </div>
+
+
+                                                    <p class="mini_price">
+                                                        59,000원
+                                                    </p>
+                                                </div>
+
+                                                <!-- 위시리스트 -->
+                                                <div class="wish_btn">
+                                                    <img class="wish_bf" src="./images/collection/wish_bf.svg"
+                                                        alt="wish_bf">
+
+                                                    <img class="wish_af" src="./images/collection/wish_af.svg"
+                                                        alt="wish_af">
+                                                </div>
+                                            </div>
+
+                                            <!-- 미니 이미지5 -->
+                                            <img src="./images/collection/mini_collection5.png" alt="mini_collection4">
+                                        </div>
+
+                                        <div class="swiper-slide
+                                mini_img
+                                mini_img6">
+
+                                            <div class="info">
+                                                <!-- 정보 -->
+                                                <div>
+                                                    <p class="mini_name">윈터 오너먼트 헤어핀 Set</p>
+
+                                                    <p class="arrival_tag">
+                                                        <span class="tag1"> </span>
+                                                        <span class="tag2"> </span>
+                                                    </p>
+
+
+                                                    <p class="arrival_price padding_price">
+                                                        29,000원
+                                                    </p>
+                                                </div>
+
+                                                <!-- 위시리스트 -->
+                                                <div class="wish_btn">
+                                                    <img class="wish_bf" src="./images/collection/wish_bf.svg"
+                                                        alt="wish_bf">
+
+                                                    <img class="wish_af" src="./images/collection/wish_af.svg"
+                                                        alt="wish_af">
+                                                </div>
+                                            </div>
+
+                                            <!-- 미니 이미지6 -->
+                                            <img src="./images/collection/mini_collection6.png" alt="mini_collection6">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- 화보 이미지2 -->
+                        <div class="collection_main" data-aos="fade-left" data-aos-delay="100">
+
+                            <!-- pic4 -->
+                            <div class="pic pic4 active">
+                                <img src="./images/collection/collection4.png" alt="collection4">
+                            </div>
+
+                            <!-- pic5 -->
+                            <div class="pic pic5">
+                                <img src="./images/collection/collection5.png" alt="collection5">
+                            </div>
+
+                            <!-- pic6 -->
+                            <div class="pic pic6">
+                                <img src="./images/collection/collection6.png" alt="collection6">
+                            </div>
+
+
+                            <!-- 콜렉션2 꾸미기 -->
+                            <div class="deco4"> <!-- 돼지꼬리 초록-->
+                                <svg width="145" height="79" viewBox="0 0 145 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="pig_tail2"
+                                        d="M137.291 28.6759C86.4923 -25.2629 41.8749 37.9394 58.804 62.7064C69.1556 77.8506 88.0122 69.9956 94.5541 60.0732C108.291 36.7538 71.8819 15.1204 46.0996 25.0009C20.9713 34.6307 9.50609 52.4939 7.50143 62.0796"
+                                        stroke="#3E8B47" stroke-width="15" stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <div class="flower_deco">
+                                <!-- 주황 -->
+                                <img class="flower_deco1" src="./images/collection/deco1.svg" alt="deco1">
+
+                                <!-- 노랑 -->
+                                <img class="flower_deco2" src="./images/collection/deco2.svg" alt="deco2">
+
+                                <!-- 파랑 -->
+                                <img class="flower_deco3" src="./images/collection/deco3.svg" alt="deco3">
+
+                                <!-- 핑크 -->
+                                <img class="flower_deco4" src="./images/collection/deco4.svg" alt="deco4">
+
+                                <!-- 흰 -->
+                                <img class="flower_deco5" src="./images/collection/deco5.svg" alt="deco5">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ========== story ========== -->
+            <div id="story">
+                <div class="story_background"> <!-- 100% 초록구름 배경 -->
+
+                    <!-- 경계선 애니메이션 -->
+                    <div class="line_ani2">
+                        <svg width="707" height="120" viewBox="0 0 707 120" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M13.03 17.9986C11.8182 17.9986 10.6693 17.4279 9.95745 16.4719C9.77035 16.2208 9.61687 15.9497 9.50139 15.663C9.38445 15.9497 9.23243 16.2208 9.04533 16.4719C8.33347 17.4279 7.18454 17.9986 5.97277 17.9986C5.16882 17.9986 4.39848 17.7546 3.74509 17.2909C2.92506 16.7088 2.38568 15.8513 2.22781 14.874C2.06995 13.8966 2.30967 12.9179 2.90606 12.1175C3.09316 11.8664 3.30949 11.6409 3.5536 11.444C3.23787 11.4241 2.92652 11.3656 2.62394 11.27C0.633064 10.6393 -0.460311 8.54629 0.185774 6.60447C0.695918 5.07356 2.14596 4.04486 3.79333 4.04486C4.19092 4.04486 4.58559 4.10621 4.9671 4.22749C5.26968 4.32308 5.55618 4.45434 5.82367 4.61985C5.74474 4.32166 5.70527 4.0149 5.70527 3.70387C5.70527 1.66217 7.40673 0 9.49993 0C11.5931 0 13.2946 1.66075 13.2946 3.70387C13.2946 4.0149 13.2551 4.32166 13.1762 4.61985C13.4422 4.45434 13.7287 4.32308 14.0328 4.22749C14.4143 4.10621 14.8089 4.04486 15.2065 4.04486C16.8554 4.04486 18.3039 5.07356 18.8141 6.60447C19.4602 8.54629 18.3683 10.6408 16.3774 11.2714C16.0748 11.367 15.7634 11.4255 15.4477 11.4455C15.6904 11.6424 15.9067 11.8678 16.0953 12.1189C16.6916 12.9193 16.9314 13.8981 16.7735 14.8754C16.6156 15.8527 16.0763 16.7102 15.2562 17.2923C14.6028 17.756 13.834 18 13.0285 18L13.03 17.9986Z"
-                                fill="#FFFAE6" />
+                                d="M-67 43.8359C-19.5541 85.016 57.7872 144.065 240.5 102.269C451.697 53.9558 520.5 -33.7314 703.799 18.6436"
+                                stroke="#FF5B38" stroke-width="5" stroke-linecap="round" />
                         </svg>
+
+                    </div>
+
+
+                    <div class="inner_story">
+
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <h2>
+                                <img src="./images/story/HELLO, WE’RE KOK..png" alt="title">
+                            </h2>
+
+
+                            <ul class="story_img">
+                                <li>
+                                    <img src="./images/story/story1.png" alt="story1">
+                                </li>
+                                <li>
+                                    <img src="./images/story/story2.png" alt="story2">
+                                </li>
+                                <li>
+                                    <img src="./images/story/story3.png" alt="story3">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <p>
+                                수 많은 옷보다, 나만의 스타일을 만들어주는 하나의 포인트.
+                                <br>
+                                콕은 한 코 한 코 직접 엮어 만든 크로셰 아이템으로 익숙한 일상에 새로운 포인트를 더합니다.
+                                <br>
+                                나의 손으로 만들어가는 또 하나의 포인트.
+                                <br>
+                                콕의 감성을 직접 완성할 수 있는 DIY KIT도 함께합니다.
+                            </p>
+
+                            <div class="story_btn">
+                                <img class="more_btn" src="./images/story/button.png" alt="button">
+
+                                <svg class="more_flower" width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.03 17.9986C11.8182 17.9986 10.6693 17.4279 9.95745 16.4719C9.77035 16.2208 9.61687 15.9497 9.50139 15.663C9.38445 15.9497 9.23243 16.2208 9.04533 16.4719C8.33347 17.4279 7.18454 17.9986 5.97277 17.9986C5.16882 17.9986 4.39848 17.7546 3.74509 17.2909C2.92506 16.7088 2.38568 15.8513 2.22781 14.874C2.06995 13.8966 2.30967 12.9179 2.90606 12.1175C3.09316 11.8664 3.30949 11.6409 3.5536 11.444C3.23787 11.4241 2.92652 11.3656 2.62394 11.27C0.633064 10.6393 -0.460311 8.54629 0.185774 6.60447C0.695918 5.07356 2.14596 4.04486 3.79333 4.04486C4.19092 4.04486 4.58559 4.10621 4.9671 4.22749C5.26968 4.32308 5.55618 4.45434 5.82367 4.61985C5.74474 4.32166 5.70527 4.0149 5.70527 3.70387C5.70527 1.66217 7.40673 0 9.49993 0C11.5931 0 13.2946 1.66075 13.2946 3.70387C13.2946 4.0149 13.2551 4.32166 13.1762 4.61985C13.4422 4.45434 13.7287 4.32308 14.0328 4.22749C14.4143 4.10621 14.8089 4.04486 15.2065 4.04486C16.8554 4.04486 18.3039 5.07356 18.8141 6.60447C19.4602 8.54629 18.3683 10.6408 16.3774 11.2714C16.0748 11.367 15.7634 11.4255 15.4477 11.4455C15.6904 11.6424 15.9067 11.8678 16.0953 12.1189C16.6916 12.9193 16.9314 13.8981 16.7735 14.8754C16.6156 15.8527 16.0763 16.7102 15.2562 17.2923C14.6028 17.756 13.834 18 13.0285 18L13.03 17.9986Z"
+                                        fill="#FFFAE6" />
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ========== event ========== -->
+            <div id="event">
+                <div class="cloud1_wrap">
+
+                    <h2>
+                        <img src="./images/event/EVENT.png" alt="EVENT">
+                    </h2>
+
+                    <div class="event_hover">
+                        <!-- 타이틀 -->
+                        <div class="event_title">
+                            <img src="./images/event/title.svg" alt="title">
+                        </div>
+
+                        <!-- 호버 시 올라오는 글 -->
+                        <div class="event_info">
+                            <h3>
+                                <img src="./images/event/sub_title.png" alt="sub_title">
+                            </h3>
+
+                            <p>
+                                콕 아이템으로 나만의 레이어드 스타일링을 완성해 공유해주세요!<br>
+                                매월 <span class="yellow">BEST KOK LOOK</span>을 선정해 특별한 혜택을 드립니다.
+                            </p>
+                        </div>
+
+                        <!-- 튀어나올 꽃 -->
+                        <img class="event_flower L_flower1" src="./images/event/L_flower1.svg" alt="L_flower1">
+
+                        <img class="event_flower L_flower2" src="./images/event/L_flower2.svg" alt="L_flower2">
+
+
+                        <img class="event_flower S_flower1" src="./images/event/S_flower1.svg" alt="S_flower1">
+
+                        <img class="event_flower S_flower2" src="./images/event/S_flower2.svg" alt="S_flower2">
+
+                        <img class="event_flower S_flower3" src="./images/event/S_flower3.svg" alt="S_flower3">
+
+                        <img class="event_flower S_flower4" src="./images/event/S_flower4.svg" alt="S_flower4">
+
+                    </div>
+
+                    <!-- 큰구름 -->
+                    <div class="cloud1">
+                        <img src="./images/event/cloud1.png" alt="cloud1">
+                    </div>
+
+                    <div class="cloud2">
+                        <img src="./images/event/cloud2.png" alt="cloud2">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ========== sns ========== -->
+            <div id="sns">
+
+                <!-- 주황 긴돼지꼬리 -->
+                <div class="sns_line">
+                    <svg width="246" height="93" viewBox="0 0 246 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M239.671 86.7835C212.36 -22.4305 114.482 9.92685 110.483 42.7178C108.483 59.1178 123.483 66.2178 136.483 63.7178C164.604 58.31 137.538 13.2921 95.1981 7.46065C51.7067 1.47064 20.5247 15.1627 6.0003 25.7769"
+                            stroke="#FF5B38" stroke-width="12" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <!-- 초록색 선 -->
+                <div class="sns_starline">
+                    <svg width="39" height="30" viewBox="0 0 39 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31.5 7.50195C27.3333 9.16862 16.7 14.502 7.5 22.502" stroke="#3E8B47"
+                            stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <!-- 초록색 별 -->
+                <div class="sns_star">
+                    <svg width="61" height="57" viewBox="0 0 61 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.0007 7.50049L21.0007 49.0005L53.0007 25.0005L7.50073 22.5005L47.0007 49.0005L26.0007 7.50049Z"
+                            stroke="#3E8B47" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <!-- 노란 하트 -->
+                <div class="sns_heart">
+                    <svg width="110" height="98" viewBox="0 0 110 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M80.1375 89.0005C44.1826 93.907 -0.731951 64.4979 8.80186 41.4035C17.6375 20.0005 44.5238 28.4371 55.5778 34.3951C56.7414 23.2969 69.5409 0.0480671 89.4381 9.86134C109.335 19.6746 102.343 51.379 91.6376 67.5005"
+                            stroke="#FFC940" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+                <!-- 마지막 구름 -->
+                <div class="cloud3">
+                    <img src="./images/event/cloud3.png" alt="cloud3">
+                </div>
+
+
+                <!-- ========== 타이틀 "SNS" =========== -->
+                <h2>
+                    <img src="./images/sns/SNS.png" alt="title">
+                </h2>
+
+                <p>
+                    @KOK.official
+                </p>
+
+                <div class="insta_frame">
+                    <img src="./images/sns/insta_frame.png" alt="insta_frame">
+                </div>
+
+
+                <!-- sns 슬라이드 -->
+                <div class="sns_slider_wrap">
+
+                    <div class="sns_view">
+                        <ul class="sns_slider">
+
+                            <!-- (앞) 6번 7번 복제 -->
+                            <li><img src="./images/sns/sns5.png" alt="sns5"></li>
+                            <li><img src="./images/sns/sns6.png" alt="sns6"></li>
+                            <li><img src="./images/sns/sns7.png" alt="sns7"></li>
+
+                            <!-- 기본 7장 이미지 -->
+                            <li><img src="./images/sns/sns1.png" alt="sns1"></li>
+                            <li><img src="./images/sns/sns2.png" alt="sns2"></li>
+                            <li class="active"><img src="./images/sns/sns3.png" alt="sns3"></li>
+                            <li><img src="./images/sns/sns4.png" alt="sns4"></li>
+                            <li><img src="./images/sns/sns5.png" alt="sns5"></li>
+                            <li><img src="./images/sns/sns6.png" alt="sns6"></li>
+                            <li><img src="./images/sns/sns7.png" alt="sns7"></li>
+
+                            <!-- (뒤) 1번 2번 복제 -->
+                            <li><img src="./images/sns/sns1.png" alt="sns1"></li>
+                            <li><img src="./images/sns/sns2.png" alt="sns2"></li>
+                            <li><img src="./images/sns/sns3.png" alt="sns3"></li>
+
+                        </ul>
+
+                        <!-- 버튼 왼쪽 -->
+                        <div class="swiper-button-prev">
+                            <img src="./images/sns/left_botton.svg" alt="left">
+                        </div>
+
+                        <!-- 버튼 오른쪽 -->
+                        <div class="swiper-button-next">
+                            <img src="./images/sns/right_botton.svg" alt="right">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========== footer 풋터 ========== -->
+            <div id="footer">
+
+                <div class="footer_bg">
+
+                    <div class="inner_footer">
+                        <div class="left_link"> <!-- 이너풋터 자식1 -->
+                            <ul>
+                                <li>마이페이지</li>
+                                <li>위시리스트</li>
+                                <li>주문배송조회</li>
+                                <li>고객문의</li>
+                            </ul>
+
+                            <section class="newsletter">
+
+                                <p>Newsletter</p>
+
+                                <form action="" method="post">
+                                    <input type="email" name="e-mail" id="em" placeholder="Enter your email">
+
+                                    <button type="button">
+                                        <img src="./images/footer/email_icon.svg" alt="email_icon">
+                                    </button>
+                                </form>
+
+                            </section>
+                        </div>
+
+                        <div class="right_link"> <!-- 이너풋터 자식2 -->
+                            <ul>
+                                <li><img src="./images/footer/youtube.svg" alt="youtube"></li>
+
+                                <li><img src="./images/footer/insta.svg" alt="insta"></li>
+
+                                <li><img src="./images/footer/pinterest.svg" alt="pinterest"></li>
+                            </ul>
+
+                            <ul class="footer_nav">
+                                <li>브랜드소개</li>
+                                <li>전체상품</li>
+                                <li>이용약관</li>
+                                <li>개인정보처리방침</li>
+                                <li>이용안내</li>
+                            </ul>
+
+                            <p>
+                                copyright © 2026 KKOK. All rights reserved.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="line">
+                        <img src="./images/footer/line.svg" alt="line">
                     </div>
                 </div>
-
             </div>
 
-        </div>
-
-    </div>
-
-    <!-- ========== event ========== -->
-    <div id="event">
-        <div class="cloud1_wrap">
-
-            <h2>
-                <img src="./images/event/EVENT.png" alt="EVENT">
-            </h2>
-
-            <div class="event_hover">
-                <!-- 타이틀 -->
-                <div class="event_title">
-                    <img src="./images/event/title.svg" alt="title">
-                </div>
-
-                <!-- 호버 시 올라오는 글 -->
-                <div class="event_info">
-                    <h3>
-                        <img src="./images/event/sub_title.png" alt="sub_title">
-                    </h3>
-
-                    <p>
-                        콕 아이템으로 나만의 레이어드 스타일링을 완성해 공유해주세요!<br>
-                        매월 <span class="yellow">BEST KOK LOOK</span>을 선정해 특별한 혜택을 드립니다.
-                    </p>
-                </div>
-
-                <!-- 튀어나올 꽃 -->
-                <img class="event_flower L_flower1" src="./images/event/L_flower1.svg" alt="L_flower1">
-
-                <img class="event_flower L_flower2" src="./images/event/L_flower2.svg" alt="L_flower2">
-
-
-                <img class="event_flower S_flower1" src="./images/event/S_flower1.svg" alt="S_flower1">
-
-                <img class="event_flower S_flower2" src="./images/event/S_flower2.svg" alt="S_flower2">
-
-                <img class="event_flower S_flower3" src="./images/event/S_flower3.svg" alt="S_flower3">
-
-                <img class="event_flower S_flower4" src="./images/event/S_flower4.svg" alt="S_flower4">
-
-            </div>
-
-            <!-- 큰구름 -->
-            <div class="cloud1">
-                <img src="./images/event/cloud1.png" alt="cloud1">
-            </div>
-
-            <div class="cloud2">
-                <img src="./images/event/cloud2.png" alt="cloud2">
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ========== sns ========== -->
-    <div id="sns">
-
-        <!-- 주황 긴돼지꼬리 -->
-        <div class="sns_line">
-            <svg width="246" height="93" viewBox="0 0 246 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M239.671 86.7835C212.36 -22.4305 114.482 9.92685 110.483 42.7178C108.483 59.1178 123.483 66.2178 136.483 63.7178C164.604 58.31 137.538 13.2921 95.1981 7.46065C51.7067 1.47064 20.5247 15.1627 6.0003 25.7769"
-                    stroke="#FF5B38" stroke-width="12" stroke-linecap="round" />
-            </svg>
-        </div>
-
-        <!-- 초록색 선 -->
-        <div class="sns_starline">
-            <svg width="39" height="30" viewBox="0 0 39 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.5 7.50195C27.3333 9.16862 16.7 14.502 7.5 22.502" stroke="#3E8B47" stroke-width="15"
-                    stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
-
-        <!-- 초록색 별 -->
-        <div class="sns_star">
-            <svg width="61" height="57" viewBox="0 0 61 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M26.0007 7.50049L21.0007 49.0005L53.0007 25.0005L7.50073 22.5005L47.0007 49.0005L26.0007 7.50049Z"
-                    stroke="#3E8B47" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
-
-        <!-- 노란 하트 -->
-        <div class="sns_heart">
-            <svg width="110" height="98" viewBox="0 0 110 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M80.1375 89.0005C44.1826 93.907 -0.731951 64.4979 8.80186 41.4035C17.6375 20.0005 44.5238 28.4371 55.5778 34.3951C56.7414 23.2969 69.5409 0.0480671 89.4381 9.86134C109.335 19.6746 102.343 51.379 91.6376 67.5005"
-                    stroke="#FFC940" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-        </div>
-
-        <!-- 마지막 구름 -->
-        <div class="cloud3">
-            <img src="./images/event/cloud3.png" alt="cloud3">
-        </div>
-
-
-        <!-- ========== 타이틀 "SNS" =========== -->
-        <h2>
-            <img src="./images/sns/SNS.png" alt="title">
-        </h2>
-
-        <p>
-            @KOK.official
-        </p>
-
-        <div class="insta_frame">
-            <img src="./images/sns/insta_frame.png" alt="insta_frame">
-        </div>
-
-
-        <!-- sns 슬라이드 -->
-        <div class="sns_slider_wrap">
-
-            <div class="sns_view">
-                <ul class="sns_slider">
-
-                    <!-- (앞) 6번 7번 복제 -->
-                    <li><img src="./images/sns/sns5.png" alt="sns5"></li>
-                    <li><img src="./images/sns/sns6.png" alt="sns6"></li>
-                    <li><img src="./images/sns/sns7.png" alt="sns7"></li>
-
-                    <!-- 기본 7장 이미지 -->
-                    <li><img src="./images/sns/sns1.png" alt="sns1"></li>
-                    <li><img src="./images/sns/sns2.png" alt="sns2"></li>
-                    <li class="active"><img src="./images/sns/sns3.png" alt="sns3"></li>
-                    <li><img src="./images/sns/sns4.png" alt="sns4"></li>
-                    <li><img src="./images/sns/sns5.png" alt="sns5"></li>
-                    <li><img src="./images/sns/sns6.png" alt="sns6"></li>
-                    <li><img src="./images/sns/sns7.png" alt="sns7"></li>
-
-                    <!-- (뒤) 1번 2번 복제 -->
-                    <li><img src="./images/sns/sns1.png" alt="sns1"></li>
-                    <li><img src="./images/sns/sns2.png" alt="sns2"></li>
-                    <li><img src="./images/sns/sns3.png" alt="sns3"></li>
-
-                </ul>
-
-                <!-- 버튼 왼쪽 -->
-                <div class="swiper-button-prev">
-                    <img src="./images/sns/left_botton.svg" alt="left">
-                </div>
-
-                <!-- 버튼 오른쪽 -->
-                <div class="swiper-button-next">
-                    <img src="./images/sns/right_botton.svg" alt="right">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ========== footer 풋터 ========== -->
-    <div id="footer">
-
-        <div class="footer_bg">
-
-            <div class="inner_footer">
-                <div class="left_link"> <!-- 이너풋터 자식1 -->
-                    <ul>
-                        <li>마이페이지</li>
-                        <li>위시리스트</li>
-                        <li>주문배송조회</li>
-                        <li>고객문의</li>
-                    </ul>
-
-                    <section class="newsletter">
-
-                        <p>Newsletter</p>
-
-                        <form action="" method="post">
-                            <input type="email" name="e-mail" id="em" placeholder="Enter your email">
-
-                            <button type="button">
-                                <img src="./images/footer/email_icon.svg" alt="email_icon">
-                            </button>
-                        </form>
-
-                    </section>
-                </div>
-
-                <div class="right_link"> <!-- 이너풋터 자식2 -->
-                    <ul>
-                        <li><img src="./images/footer/youtube.svg" alt="youtube"></li>
-
-                        <li><img src="./images/footer/insta.svg" alt="insta"></li>
-
-                        <li><img src="./images/footer/pinterest.svg" alt="pinterest"></li>
-                    </ul>
-
-                    <ul class="footer_nav">
-                        <li>브랜드소개</li>
-                        <li>전체상품</li>
-                        <li>이용약관</li>
-                        <li>개인정보처리방침</li>
-                        <li>이용안내</li>
-                    </ul>
-
-                    <p>
-                        copyright © 2026 KKOK. All rights reserved.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="line">
-                <img src="./images/footer/line.svg" alt="line">
-            </div>
         </div>
     </div>
 
