@@ -110,6 +110,46 @@ body {
     min-width: 1360px;
 }
 
+/* =============== intro 인트로 영상 =============== */
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fffae6;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+.intro-video {
+  width: 600px;
+  object-fit: contain;
+}
+
+.intro.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.main {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.main.show {
+  opacity: 1;
+}
+
 /* =============== sidde_bar 사이드 바 =============== */
 .side_bar {
     position: fixed;
