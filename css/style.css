@@ -112,42 +112,42 @@ body {
 
 /* =============== intro 인트로 영상 =============== */
 .intro {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  background: #fffae6;
+    background: #fffae6;
 
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 
-  transition:
-    opacity 0.6s ease,
-    visibility 0.6s ease;
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
 }
 
 .intro-video {
-  width: 600px;
-  object-fit: contain;
+    width: 600px;
+    object-fit: contain;
 }
 
 .intro.hide {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .main {
-  opacity: 0;
-  transition: opacity 0.8s ease;
+    opacity: 0;
+    transition: opacity 0.8s ease;
 }
 
 .main.show {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* =============== sidde_bar 사이드 바 =============== */
@@ -173,11 +173,7 @@ body {
 
 /* =============== header 헤더 =============== */
 header {
-    width: 100%;
     height: 100px;
-
-    padding: 40px 90px 25px;
-    box-sizing: border-box;
 
     font-family: 'Paperlogy';
     font-size: 20px;
@@ -187,16 +183,22 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 99;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     transition:
         transform 0.35s ease,
         background-color 0.35s ease,
         color 0.35s ease;
+}
+
+.inner_header {
+    width: 1780px;
+    margin: 25px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* 스크롤 후 위로 올릴 때 보이는 헤더 */
@@ -409,6 +411,7 @@ h2 img {
     position: relative;
     z-index: 1;
 }
+
 /* '레시피코리아 서체' 타이틀 공통 꾸미기 - 끝 */
 
 
@@ -453,7 +456,7 @@ h2 img {
 
 .DIY_badgeM::after {
     content: "";
-     display: inline-block;
+    display: inline-block;
 
     width: 50px;
     height: 21px;
@@ -616,7 +619,6 @@ h2 img {
 
 
 /* =============== collection1 =============== */
-
 #collection1 h2 {
     width: 1320px;
     margin: 71px auto 0;
@@ -1052,8 +1054,10 @@ h2 img {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 16px 19px 15px;
 
-    position: relative; /* wish(하트) 부모 */
-    position: absolute; /* .mini_img 자식 */
+    position: relative;
+    /* wish(하트) 부모 */
+    position: absolute;
+    /* .mini_img 자식 */
     bottom: 0;
     left: 0;
 
@@ -1079,8 +1083,9 @@ h2 img {
 }
 
 /* 위시리스트 버튼 */
-.wish_btn { 
-    position: absolute; /* 부모 info */
+.wish_btn {
+    position: absolute;
+    /* 부모 info */
     right: 20px;
     bottom: 19px;
 
@@ -1134,6 +1139,7 @@ h2 img {
         transform: scale(1);
     }
 }
+
 /* ---------------- 미니 이미지 호버(info) - 끝 ----------------*/
 
 
@@ -1634,6 +1640,10 @@ h2 img {
 }
 
 /* =============== event =============== */
+#event {
+    overflow: hidden;
+}
+
 .cloud1_wrap {
     width: 100%;
     height: 1181px;
@@ -2006,7 +2016,7 @@ h2 img {
 
 /* ===================== sns ===================== */
 #sns {
-    width: 1920px;
+    width: 100%;
     height: 830px;
     margin: 0 auto;
 
@@ -2225,7 +2235,7 @@ h2 img {
 .insta_frame {
     position: absolute;
     top: 106px;
-    left: 751px;
+    left: 743px;
 }
 
 .insta_frame img {
@@ -2427,4 +2437,9 @@ input::placeholder {
 
     pointer-events: none;
     /* z-index로 인해 뉴스레터 포인트가 방해되니 라인 포인트 none 하기 */
+}
+
+#footer .line img {
+    display: block;
+    width: 100%;
 }
