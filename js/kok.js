@@ -1,14 +1,35 @@
+
 /* ---------- 인트로 영상 ---------- */
 const intro = document.querySelector('#intro');
 const introVideo = document.querySelector('#introVideo');
 const main = document.querySelector('#main');
 
-introVideo.addEventListener('ended', () => {
+// 현재 페이지가 새로고침으로 열렸는지 확인
+const navigationEntry = performance.getEntriesByType('navigation')[0];
+const isReload = navigationEntry?.type === 'reload';
 
+// 첫 방문이거나 새로고침한 경우
+const showIntro = !sessionStorage.getItem('kokVisited') || isReload;
+
+if (showIntro) {
+  sessionStorage.setItem('kokVisited', 'true');
+
+  intro.classList.remove('hide');
+  main.classList.remove('show');
+
+  // 영상이 끝나면 메인 화면 표시
+  introVideo.addEventListener('ended', () => {
+    intro.classList.add('hide');
+    main.classList.add('show');
+  });
+
+} else {
+  // 재방문 시 인트로 건너뛰기
+  introVideo.pause();
   intro.classList.add('hide');
   main.classList.add('show');
+}
 
-});
 
 /* ---------- 스크롤 시 헤더 ---------- */
 const header = document.querySelector('header');
@@ -50,6 +71,24 @@ window.addEventListener('scroll', function () {
 
   lastScrollY = currentScrollY;
 });
+
+
+/* ---------- NEW ARRIVAL 이미지 동시 전환 ---------- */
+
+const arrivalImages = document.querySelectorAll(
+  '.arrival_wrap li:nth-child(-n+2) .img_wrap'
+);
+
+let arrivalActive = false;
+
+setInterval(() => {
+  arrivalActive = !arrivalActive;
+
+  arrivalImages.forEach((item) => {
+    item.classList.toggle('active', arrivalActive);
+  });
+
+}, 1500);
 
 
 /* ---------- 경계선 라인 애니메이션 ---------- */

@@ -428,7 +428,7 @@ h2 img {
 }
 
 /* 호버 */
-.arrival_wrap .img_wrap:hover~.arrival_hover {
+.arrival_wrap li:hover .arrival_hover {
     display: block;
 }
 
@@ -441,6 +441,25 @@ h2 img {
 
     width: 100%;
     margin-bottom: 24px;
+}
+
+
+/* DIY 상품 이미지 자동 전환 */
+.arrival_wrap li:nth-child(-n+2) .img_wrap {
+    position: relative;
+}
+
+/* 두 번째 이미지 겹치기 */
+.arrival_wrap li:nth-child(-n+2) .img_wrap img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* 동시에 이미지 변경 */
+.arrival_wrap li:nth-child(-n+2) .img_wrap.active img:nth-child(2) {
+    opacity: 1;
 }
 
 .arrival_name {
@@ -579,9 +598,6 @@ h2 img {
     right: 0;
 
     display: none;
-
-    /* 마우스로 잡히는 대상에서 무시 */
-    pointer-events: none;
 }
 
 .arrival_hover img {
