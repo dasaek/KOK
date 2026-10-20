@@ -30,6 +30,23 @@ if (showIntro) {
   main.classList.add('show');
 }
 
+/* ---------- 헤더 로고 클릭 시 인트로 재생 ---------- */
+const logoLink = document.querySelector('.logo a');
+
+logoLink.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // 인트로 화면 다시 표시
+  intro.classList.remove('hide');
+  main.classList.remove('show');
+
+  // 스크롤 맨 위로 이동
+  window.scrollTo({ top: 0, behavior: 'instant' });
+
+  // 영상을 처음부터 다시 재생
+  introVideo.currentTime = 0;
+  introVideo.play();
+});
 
 /* ---------- 스크롤 시 헤더 ---------- */
 const header = document.querySelector('header');
