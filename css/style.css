@@ -1765,6 +1765,10 @@ h2 img {
     color: #FFC227;
 }
 
+.yellow a {
+    text-decoration: underline;
+}
+
 .event_flower {
     position: absolute;
 
